@@ -1,0 +1,16 @@
+.about-us-slider {
+  overflow: hidden;
+  margin-bottom: 4em;
+}
+
+.about-us-slider__moving-content {
+  transform-style: preserve-3d;
+}
+
+.about-us-slider__running-text {
+  white-space: nowrap;
+}
+
+.about-us__image {
+  position: absolute;
+}

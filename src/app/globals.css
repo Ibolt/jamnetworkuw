@@ -12,7 +12,7 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 body {
@@ -28,11 +28,11 @@ body {
 }
 .subheading {
   font-weight: 500;
-  font-size: 3em; /* 48px */
+  font-size: 4em; /* 48px */
 }
 p {
   font-weight: 400;
-  font-size: 1em; /* 16px */
+  font-size: 1.125em; /* 64px */
 }
 
 /* Default Element Overrides */
