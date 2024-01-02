@@ -31,27 +31,9 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-.subclub-card:hover {
-  cursor: pointer;
-}
 .subclub-card__text-container {
   z-index: 1;
   background-color: #000000a6;
   padding: 1em;
   width: 50%;
 }
-
-.slides {
-  position: relative;
-  height: 100vh;
-  display: flex;
-}
-.slides > div {
-  flex: 0 0 100%;
-  width: 100%;
-  height: inherit;
-}
-/* .swiper-wrapper {
-  transition-duration: 5s !important;
-  transition-delay: 5s !important;
-} */

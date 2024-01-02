@@ -8,6 +8,7 @@ const About = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log("handle scroll from about");
       const scrollPercentage =
         window.scrollY / (document.body.scrollHeight - window.innerHeight);
       setScrollPosition(scrollPercentage * 100);

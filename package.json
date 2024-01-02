@@ -17,6 +17,7 @@
     "gsap": "^3.12.4",
     "next": "14.0.4",
     "react": "^18",
+    "react-curved-text": "^3.0.0",
     "react-dom": "^18",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.5"
@@ -26,6 +27,7 @@
     "@splinetool/runtime": "^1.0.16",
     "@types/node": "^20",
     "@types/react": "^18",
+    "@types/react-curved-text": "^2.0.3",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",

@@ -1,0 +1,101 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --clr-1: #736afd;
+  --clr-2: #698eec;
+  --clr-3: #5fb1dc;
+  --clr-4: #54d5cb;
+  --clr-5: #4af8ba;
+}
+
+.exec-bubble {
+  position: relative;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.exec-bubble::before,
+.exec-bubble::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  border-radius: inherit;
+  background: linear-gradient(
+    var(--gradient-angle),
+    var(--clr-1),
+    var(--clr-3),
+    var(--clr-5)
+  );
+  animation: bubble-gradient-rotation 4s linear infinite;
+}
+.exec-bubble::after {
+  filter: blur(3.5rem);
+}
+.exec-bubble:hover {
+  transform: scale(1.05);
+}
+
+@keyframes bubble-gradient-rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.exec-bubble__span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 200px;
+  transform-origin: bottom center;
+}
+
+.execs-slider {
+  position: relative;
+  z-index: 2;
+}
+.execs-slider__moving-content {
+  transform-style: preserve-3d;
+  display: flex;
+  animation-play-state: running;
+}
+.execs-slider__moving-content:hover {
+  animation-play-state: paused;
+}
+
+.execs-slider__running-bubbles {
+  display: flex;
+  gap: 1em;
+  font-size: 92px;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+  animation-play-state: inherit;
+}
+.execs-slider__running-bubbles::after {
+  content: "";
+  display: inline-block;
+  width: 0.05rem;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(-100%);
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translate3d(0, 900px, 0);
+  }
+  100% {
+    transform: translate3d(0, -500px, 0);
+  }
+}
