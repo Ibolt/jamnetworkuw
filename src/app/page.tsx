@@ -6,6 +6,7 @@ import "../styles/pages/about.css";
 import About from "./components/homepage-sections/about";
 import SubClubs from "./components/homepage-sections/subclubs";
 import Execs from "./components/homepage-sections/execs";
+import Events from "./components/homepage-sections/events";
 
 export default function Home() {
   return (
@@ -56,6 +57,7 @@ export default function Home() {
         />
       </div>
       <About />
+      <Events />
       <SubClubs />
       <Execs />
     </main>
