@@ -38,8 +38,10 @@ const Execs = () => {
 
   const colors = ["#736afd", "#698eec", "#5fb1dc", "#54d5cb", "#4af8ba"];
 
+  // const windowWidth = typeof window !== "undefined" ? window.innerWidth : 1000; // Default value
+
   const backgroundBubbles = Array.from({
-    length: window.innerWidth / 200,
+    length: 10,
   }).map((_, i) => {
     const colorIndex = Math.floor(Math.random() * colors.length);
     const animationDuration = Math.random() * 10 + 10; // Random duration between 10 and 20 seconds
