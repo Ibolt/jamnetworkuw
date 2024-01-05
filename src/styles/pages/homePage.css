@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
   padding: 50%;
-  font-size: 1.5em;
-  text-wrap: nowrap;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -34,4 +32,11 @@
 .circle-link:hover {
   animation-play-state: paused;
   transform: scale(1.1);
+}
+
+.link-text {
+  color: inherit;
+  font-size: 3em;
+  text-decoration: none;
+  text-wrap: nowrap;
 }

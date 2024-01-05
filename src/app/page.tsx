@@ -6,8 +6,8 @@ import SubClubs from "./components/homepage-sections/subclubs";
 import Execs from "./components/homepage-sections/execs";
 import Events from "./components/homepage-sections/events";
 import { DISCORD_LINK, MAIL_LINK } from "./components/constants";
-import { useRef, useState } from "react";
 import Logo3DModel from "./components/logo3DModel";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -88,16 +88,28 @@ export default function Home() {
             color: "black",
           }}
         >
-          <span>Sign Ups</span>
+          <span>
+            <Link href="/forms" className="link-text">
+              Sign Ups
+            </Link>
+          </span>
         </div>
         <div className="circle-link" style={{ backgroundColor: "#736afd" }}>
-          <span>Docs</span>
+          <span>
+            <Link href="/docs" className="link-text">
+              Docs
+            </Link>
+          </span>
         </div>
         <div
           className="circle-link"
           style={{ backgroundColor: "#FFD449", color: "black" }}
         >
-          <span>Newsletter</span>
+          <span>
+            <Link href="/newsletter" className="link-text">
+              Newsletter
+            </Link>
+          </span>
         </div>
       </div>
     </main>
