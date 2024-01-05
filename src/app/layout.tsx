@@ -11,6 +11,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import "./globals.css";
+import {
+  DISCORD_LINK,
+  IG_LINK,
+  SOUNDCLOUD_LINK,
+  YT_LINK,
+} from "./components/constants";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -25,27 +31,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const logo = (
-    <Image
-      src="/media/JN-minimal-logo.png"
-      width={50}
-      height={50}
-      alt="Picture of the author"
-    />
-  );
-
-  const socialMediaLogos = [
-    <FontAwesomeIcon icon={faInstagram} width={25} height={25} key="JN_IG" />,
-    <FontAwesomeIcon icon={faYoutube} width={25} height={25} key="JN_YT" />,
-    <FontAwesomeIcon
-      icon={faSoundcloud}
-      width={25}
-      height={25}
-      key="JN_SOUND"
-    />,
-    <FontAwesomeIcon icon={faDiscord} width={25} height={25} key="JN_DISC" />,
-  ];
-
   return (
     <html lang="en">
       <body className={jost.className}>
@@ -58,12 +43,21 @@ export default function RootLayout({
             padding: "16px",
           }}
         >
-          {logo}
+          <Link href="/">
+            <Image
+              src="/media/JN-minimal-logo.png"
+              className="clickable"
+              width={50}
+              height={50}
+              alt="Picture of the author"
+            />
+          </Link>
+
           <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-            <Link href="" className="link">
+            <Link href="/" className="link">
               About
             </Link>
-            <Link href="" className="link">
+            <Link href="/forms" className="link">
               Sign Ups
             </Link>
             <Link href="" className="link">
@@ -75,7 +69,64 @@ export default function RootLayout({
             <Link href="" className="link">
               Documents
             </Link>
-            {socialMediaLogos}
+            <a
+              href={IG_LINK}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="icon-link"
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="clickable"
+                width={25}
+                height={25}
+                key="JN_IG"
+              />
+            </a>
+
+            <a
+              href={YT_LINK}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="icon-link"
+            >
+              <FontAwesomeIcon
+                icon={faYoutube}
+                width={25}
+                height={25}
+                key="JN_YT"
+              />
+            </a>
+
+            <a
+              href={SOUNDCLOUD_LINK}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="icon-link"
+            >
+              <FontAwesomeIcon
+                icon={faSoundcloud}
+                className="clickable"
+                width={25}
+                height={25}
+                key="JN_SOUND"
+              />
+            </a>
+
+            <a
+              href={DISCORD_LINK}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="icon-link"
+            >
+              <FontAwesomeIcon
+                icon={faDiscord}
+                className="clickable"
+                width={25}
+                height={25}
+                key="JN_DISC"
+              />
+            </a>
           </div>
         </div>
         {children}
