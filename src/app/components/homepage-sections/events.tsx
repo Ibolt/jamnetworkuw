@@ -25,7 +25,7 @@ const Events = () => {
     return string.split(" ").map((word, i) => {
       return (
         <span
-          key={word}
+          key={`${word}-${i}`}
           className="event-card-subtitle-word"
           style={{
             transitionDelay: `${i * 40}ms`,

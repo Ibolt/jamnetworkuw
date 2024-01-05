@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCreative } from "swiper/modules";
 import gsap from "gsap";

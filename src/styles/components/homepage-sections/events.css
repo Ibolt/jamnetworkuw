@@ -3,8 +3,6 @@
   border: 0.5vmin solid #4af8ba;
   background: black;
   position: relative;
-  /* width: 56vmin; */
-  width: 33%;
   flex: 1;
   cursor: pointer;
 }
@@ -32,7 +30,7 @@
 
 .event-card:hover:before {
   background-position: 100% 100%;
-  transform: scale(1.08, 1.03);
+  transform: scale(1.08);
 }
 
 .event-card-content {
