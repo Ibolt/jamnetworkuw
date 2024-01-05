@@ -1,0 +1,37 @@
+.circle-link {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50%;
+  font-size: 1.5em;
+  text-wrap: nowrap;
+  transition: transform 0.3s ease-in-out;
+}
+
+.circle-link::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  border-radius: 50%;
+}
+
+.circle-link > span {
+  position: absolute;
+  animation: rotation 5s infinite linear;
+  animation-play-state: inherit;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.circle-link:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
