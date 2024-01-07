@@ -30,6 +30,7 @@
   display: flex !important;
   flex-direction: column;
   justify-content: flex-end;
+  /* margin-bottom: 10em; */
 }
 .subclub-card__text-container {
   z-index: 1;

@@ -142,25 +142,6 @@ const SubClubs = () => {
         position: "relative",
       }}
     >
-      <div
-        ref={execsTransitionWrapperRef}
-        style={{
-          height: "100vh",
-          width: "max-content",
-          backgroundColor: "black",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          zIndex: 3,
-          display: "flex",
-          alignItems: "center",
-          transform: "translate3d(100%, 35px, 0)",
-        }}
-      >
-        <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
-          <h1 style={{ fontSize: "23em" }}>Meet The Execs</h1>
-        </div>
-      </div>
       <div style={{ height: "inherit" }}>
         <div className="subclubs-slider" style={{ transform: "rotate(5deg)" }}>
           <div className="subclubs-slider__moving-content">
@@ -207,12 +188,31 @@ const SubClubs = () => {
             },
           }}
           modules={[Autoplay, EffectCreative]}
-          style={{ height: "inherit" }}
+          style={{ height: "inherit", paddingBottom: "2em" }}
         >
           {slides.map((slide, i) => (
             <SwiperSlide key={slideKeys[i]}>{slide}</SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div
+        ref={execsTransitionWrapperRef}
+        style={{
+          height: "100vh",
+          width: "max-content",
+          backgroundColor: "black",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: 9999,
+          display: "flex",
+          alignItems: "center",
+          transform: "translate3d(100%, 35px, 0)",
+        }}
+      >
+        <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
+          <h1 style={{ fontSize: "23em" }}>Meet The Execs</h1>
+        </div>
       </div>
     </div>
   );

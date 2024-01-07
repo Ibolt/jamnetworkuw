@@ -49,15 +49,6 @@
   }
 }
 
-.exec-bubble__span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 200px;
-  transform-origin: bottom center;
-}
-
 .execs-slider {
   position: relative;
   z-index: 2;
