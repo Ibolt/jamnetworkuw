@@ -15,13 +15,21 @@ export default function Home() {
       <div
         style={{
           display: "flex",
+          flexWrap: "wrap",
           gap: "32px",
           alignItems: "center",
           padding: "4em",
           height: "100vh",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "32px",
+            flex: 1,
+          }}
+        >
           <div>
             <p style={{ fontSize: "24px", fontWeight: 300 }}>Welcome To</p>
             <h1 className={"title"}>JamNetwork UW</h1>
@@ -30,16 +38,16 @@ export default function Home() {
               all styles, genres, and levels of experience!
             </p>
           </div>
-          <div style={{ display: "flex", gap: "16px" }}>
+          <div style={{ display: "flex", gap: "2em" }}>
             <a
-              className="link-button"
+              className="gradient-link-button"
               href={MAIL_LINK}
               rel="noreferrer noopener"
             >
               Get In Touch
             </a>
             <a
-              className="link-button"
+              className="gradient-link-button"
               href={DISCORD_LINK}
               target="_blank"
               rel="noreferrer noopener"
@@ -47,21 +55,6 @@ export default function Home() {
               Join Our Discord
             </a>
           </div>
-          {/* {isArrowVisible && (
-            <div
-              style={{
-                position: "absolute",
-                bottom: "10px",
-                left: "50%",
-                transform: "translateX(-50%)",
-                fontSize: "2em",
-                cursor: "pointer",
-              }}
-              onClick={scrollToAbout}
-            >
-              &#8595;
-            </div>
-          )} */}
         </div>
         <Logo3DModel />
       </div>
