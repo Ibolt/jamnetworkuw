@@ -1,5 +1,5 @@
-export type GDriveForm = {
-  id: string;
-  name: string;
-  webViewLink: string;
+export type GDriveFile = {
+  id?: string | null | undefined;
+  name?: string | null | undefined;
+  webViewLink?: string | null | undefined;
 };

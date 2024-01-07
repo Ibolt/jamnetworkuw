@@ -1,0 +1,86 @@
+.gradient-card {
+  aspect-ratio: 1 / 1;
+  border: 0.5vmin solid #4af8ba;
+  background: black;
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+}
+
+/* For gradient overlay */
+.gradient-card:before {
+  background: linear-gradient(
+    130deg,
+    transparent 0% 33%,
+    #736afd 66%,
+    #1db2fa 83.5%,
+    #4af8ba 100%
+  );
+  background-position: 0% 0%;
+  background-size: 300% 300%;
+  transition: background-position 0.7s ease, transform 0.7s ease;
+  content: "";
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+.gradient-card:hover:before {
+  background-position: 100% 100%;
+  transform: scale(1.08);
+}
+
+.gradient-card-content {
+  background: radial-gradient(rgb(255, 255, 255, 0.2) 8%, transparent 8%);
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  transition: background-position 0.7s ease;
+  position: relative;
+  width: 100%;
+  padding: 5vmin;
+  z-index: 2;
+}
+.gradient-card:hover > .gradient-card-content {
+  background-position: -10% 0%;
+}
+
+.gradient-card-title {
+  font-size: 6vmin;
+  font-weight: 400;
+}
+
+.gradient-card-event-subtitle {
+  font-size: 3vmin;
+  font-weight: 400;
+  margin-top: 2vmin;
+}
+.gradient-card-event-subtitle-word {
+  display: inline-block;
+  opacity: 0;
+  margin: 0vmin 0.3vmin;
+  position: relative;
+  transform: translateY(40%);
+  transition: none;
+}
+.gradient-card:hover
+  > .gradient-card-content
+  > .gradient-card-event-subtitle
+  > .gradient-card-event-subtitle-word {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
+}
+
+.gradient-card-file-button {
+  border: 1px solid #4af8ba;
+  background-color: #4af8ba;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+}
