@@ -1,22 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faYoutube,
-  faSoundcloud,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
 
 import "./globals.css";
-import {
-  DISCORD_LINK,
-  IG_LINK,
-  SOUNDCLOUD_LINK,
-  YT_LINK,
-} from "./components/constants";
+
+import NavBar from "./components/navBar";
+import { NavLinks, SocialLinks } from "./components/navLinks";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -34,102 +22,51 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jost.className}>
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "16px",
-          }}
-        >
-          <Link href="/">
-            <Image
-              src="/media/JN-minimal-logo.png"
-              className="clickable"
-              width={50}
-              height={50}
-              alt="Picture of the author"
-            />
-          </Link>
-
-          <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-            <Link href="/" className="link">
-              About
-            </Link>
-            <Link href="/forms" className="link">
-              Sign Ups
-            </Link>
-            <Link href="" className="link">
-              Event Calendar
-            </Link>
-            <Link href="" className="link">
-              Gallery
-            </Link>
-            <Link href="" className="link">
-              Documents
-            </Link>
-            <a
-              href={IG_LINK}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="icon-link"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="clickable"
-                width={25}
-                height={25}
-                key="JN_IG"
-              />
-            </a>
-
-            <a
-              href={YT_LINK}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="icon-link"
-            >
-              <FontAwesomeIcon
-                icon={faYoutube}
-                width={25}
-                height={25}
-                key="JN_YT"
-              />
-            </a>
-
-            <a
-              href={SOUNDCLOUD_LINK}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="icon-link"
-            >
-              <FontAwesomeIcon
-                icon={faSoundcloud}
-                className="clickable"
-                width={25}
-                height={25}
-                key="JN_SOUND"
-              />
-            </a>
-
-            <a
-              href={DISCORD_LINK}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="icon-link"
-            >
-              <FontAwesomeIcon
-                icon={faDiscord}
-                className="clickable"
-                width={25}
-                height={25}
-                key="JN_DISC"
-              />
-            </a>
-          </div>
-        </div>
+        <NavBar />
         {children}
+        <footer>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              background: "black",
+              padding: "4em",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                gap: "2em",
+                marginBottom: "2em",
+              }}
+            >
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p style={{ fontSize: "20px", marginBottom: "0.25em" }}>
+                  Site Map
+                </p>
+                {NavLinks}
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <p style={{ fontSize: "20px", marginBottom: "0.25em" }}>
+                  Socials
+                </p>
+                {SocialLinks([
+                  <div>Instagram</div>,
+                  <div>YouTube</div>,
+                  <div>SoundCloud</div>,
+                  <div>Discord</div>,
+                ])}
+              </div>
+              <p>jamnetworkuw@gmail.com</p>
+            </div>
+            <p>&copy; {new Date().getFullYear()} JamNetwork UW</p>
+          </div>
+        </footer>
       </body>
     </html>
   );

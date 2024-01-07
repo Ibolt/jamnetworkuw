@@ -1,3 +1,9 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 :root {
   --background-start-rgb: 29, 52, 97;
   --background-end-rgb: 29, 178, 250;
@@ -54,29 +60,9 @@ button:hover {
 .link {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.25em;
   cursor: pointer;
 }
 .link:hover {
   text-decoration: underline;
-}
-
-.icon-link {
-  color: white;
-}
-
-.link-button {
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 4px;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  font-family: inherit;
-  text-decoration: none;
-}
-.link-button:hover {
-  background-color: white;
-  color: #1d3461;
-  cursor: pointer;
 }

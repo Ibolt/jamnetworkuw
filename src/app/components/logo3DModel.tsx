@@ -8,6 +8,7 @@ export default function Logo3DModel() {
     <Spline
       scene={SPLINE_LINK}
       style={{
+        flex: 1,
         pointerEvents: "none",
       }}
     />

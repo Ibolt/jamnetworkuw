@@ -19,7 +19,7 @@ const About = () => {
   useEffect(() => {
     if (runningTextRef.current) {
       runningTextRef.current.style.transform = `translate3d(-${
-        scrollPosition / 2
+        scrollPosition * 5
       }vw, 0, 0)`;
     }
   }, [scrollPosition]);
