@@ -47,14 +47,7 @@
   background-position: -10% 0%;
 }
 
-.gradient-card-title {
-  font-size: 6vmin;
-  font-weight: 400;
-}
-
 .gradient-card-event-subtitle {
-  font-size: 3vmin;
-  font-weight: 400;
   margin-top: 2vmin;
 }
 .gradient-card-event-subtitle-word {
@@ -78,7 +71,7 @@
   border: 1px solid #4af8ba;
   background-color: #4af8ba;
   border-radius: 2px;
-  font-size: 1rem;
+  font-size: var(--font-min);
   font-weight: 500;
   text-decoration: none;
   color: black;

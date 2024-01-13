@@ -68,10 +68,7 @@ const About = () => {
     <div style={{ height: "100vh", overflow: "hidden" }}>
       <div className="about-us-slider">
         <div className="about-us-slider__moving-content" ref={runningTextRef}>
-          <h1
-            className="about-us-slider__running-text"
-            style={{ fontSize: "124px" }}
-          >
+          <h1 className="about-us-slider__running-text">
             • About us • About us • About us • About us • About us • About us
           </h1>
         </div>
@@ -83,7 +80,7 @@ const About = () => {
           gap: "12em",
         }}
       >
-        <p style={{ fontSize: "32px", width: "50%" }}>
+        <p className="p--large" style={{ width: "50%" }}>
           If you’re thinking,
           <span style={{ fontStyle: "italic", color: "#FFD449" }}>
             “I do music. Where does one do music around here? How do I run into

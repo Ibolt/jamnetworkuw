@@ -12,11 +12,7 @@ export default async function BaseFilePage({
 }: BaseFilePageProps) {
   return (
     <div style={{ padding: "0em 8em 8em 8em", minHeight: "100vh" }}>
-      <h1
-        style={{ fontSize: "7.25em", fontWeight: 400, marginBottom: "0.5em" }}
-      >
-        Forms
-      </h1>
+      <h1 style={{ marginBottom: "0.5em" }}>Forms</h1>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5em" }}>
         {files.map((file) => (
           <HoverGradientFileCard

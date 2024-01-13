@@ -41,9 +41,7 @@ export default function RootLayout({
               }}
             >
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <p style={{ fontSize: "20px", marginBottom: "0.25em" }}>
-                  Site Map
-                </p>
+                <p style={{ marginBottom: "0.25em" }}>Site Map</p>
                 {NavLinks}
               </div>
               <div
@@ -52,19 +50,19 @@ export default function RootLayout({
                   flexDirection: "column",
                 }}
               >
-                <p style={{ fontSize: "20px", marginBottom: "0.25em" }}>
-                  Socials
-                </p>
+                <p style={{ marginBottom: "0.25em" }}>Socials</p>
                 {SocialLinks([
-                  <div>Instagram</div>,
-                  <div>YouTube</div>,
-                  <div>SoundCloud</div>,
-                  <div>Discord</div>,
+                  <div className="p--min">Instagram</div>,
+                  <div className="p--min">YouTube</div>,
+                  <div className="p--min">SoundCloud</div>,
+                  <div className="p--min">Discord</div>,
                 ])}
               </div>
               <p>jamnetworkuw@gmail.com</p>
             </div>
-            <p>&copy; {new Date().getFullYear()} JamNetwork UW</p>
+            <p className="p--min">
+              &copy; {new Date().getFullYear()} JamNetwork UW
+            </p>
           </div>
         </footer>
       </body>

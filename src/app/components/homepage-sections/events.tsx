@@ -39,9 +39,7 @@ const Events = () => {
         alignItems: "center",
       }}
     >
-      <h1 className="hidden" style={{ fontSize: "112px" }}>
-        Events
-      </h1>
+      <h1 className="hidden">Events</h1>
       <div
         style={{
           height: "90%",
@@ -86,9 +84,8 @@ const Events = () => {
       </div>
 
       <p
-        className="hidden"
+        className="hidden p--large"
         style={{
-          fontSize: "32px",
           width: "50%",
           textAlign: "center",
           marginBottom: "2em",

@@ -56,19 +56,8 @@ const SubClubs = () => {
         }}
       />
       <div className="subclub-card__text-container">
-        <h1
-          style={{
-            fontSize: "92px",
-            fontWeight: 400,
-          }}
-        >
-          BANDWIDTH
-        </h1>
-        <p
-          style={{
-            fontSize: "24px",
-          }}
-        >
+        <h2>BANDWIDTH</h2>
+        <p>
           Bandwidth is JamNet's very own radio show on Radio Waterloo's CKMS
           102.7 FM, Mondays at 7PM! We play student submissions, feature themed
           episodes around specific musical topics, and have even hosted some
@@ -87,20 +76,14 @@ const SubClubs = () => {
         }}
       />
       <div className="subclub-card__text-container">
-        <h1
-          style={{
-            fontSize: "92px",
-            fontWeight: 400,
-          }}
-        >
-          VOCAL VICTORIES
-        </h1>
-        <p
-          style={{
-            fontSize: "24px",
-          }}
-        >
-          Some stuff about learning how to sing and so on.
+        <h2>VOCAL VICTORIES</h2>
+        <p>
+          Vocal Victories emodies the educational, fun and enthusitic spirit of
+          JamNetwork, focusing on vocals and singing. Through these sessions, we
+          hope to improve members abilities and confidence to sing in all
+          different sorts of environments, having fun along the way. We do vocal
+          drills, practice songs, and perform in a very special tunnel on
+          campus. Only victories here!
         </p>
       </div>
     </div>,
@@ -114,21 +97,8 @@ const SubClubs = () => {
         }}
       />
       <div className="subclub-card__text-container">
-        <h1
-          style={{
-            fontSize: "92px",
-            fontWeight: 400,
-          }}
-        >
-          PRODUCTION CLUB
-        </h1>
-        <p
-          style={{
-            fontSize: "24px",
-          }}
-        >
-          Track roasts and mixing workshops etc.
-        </p>
+        <h2 className="subheading">PRODUCTION CLUB</h2>
+        <p>Track roasts and mixing workshops etc.</p>
       </div>
     </div>,
   ];
@@ -211,7 +181,7 @@ const SubClubs = () => {
         }}
       >
         <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
-          <h1 style={{ fontSize: "23em" }}>Meet The Execs</h1>
+          <h1 style={{ fontSize: "23em", fontWeight: 600 }}>Meet The Execs</h1>
         </div>
       </div>
     </div>

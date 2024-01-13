@@ -18,7 +18,7 @@ export default function Home() {
           flexWrap: "wrap",
           gap: "32px",
           alignItems: "center",
-          padding: "4em",
+          padding: "8em",
           height: "100vh",
         }}
       >
@@ -27,13 +27,13 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             gap: "32px",
-            flex: 1,
+            flex: 2,
           }}
         >
           <div>
-            <p style={{ fontSize: "24px", fontWeight: 300 }}>Welcome To</p>
-            <h1 className={"title"}>JamNetwork UW</h1>
-            <p style={{ fontSize: "28px" }}>
+            <p style={{ fontWeight: 300 }}>Welcome To</p>
+            <h1>JamNetwork UW</h1>
+            <p>
               A music club at the University of Waterloo open to musicians of
               all styles, genres, and levels of experience!
             </p>

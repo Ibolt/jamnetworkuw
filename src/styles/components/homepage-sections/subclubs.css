@@ -12,10 +12,11 @@
 }
 
 .subclubs-slider__running-text {
-  font-size: 92px;
+  font-size: var(--font-700);
   white-space: nowrap;
   background-color: #af984e;
   animation: scroll 15s linear infinite;
+  margin-right: -1px;
 }
 
 @keyframes scroll {
@@ -30,7 +31,6 @@
   display: flex !important;
   flex-direction: column;
   justify-content: flex-end;
-  /* margin-bottom: 10em; */
 }
 .subclub-card__text-container {
   z-index: 1;

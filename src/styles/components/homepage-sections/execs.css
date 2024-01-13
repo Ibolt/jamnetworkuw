@@ -65,7 +65,7 @@
 .execs-slider__running-bubbles {
   display: flex;
   gap: 1em;
-  font-size: 92px;
+  font-size: var(--font-500);
   white-space: nowrap;
   animation: scroll 25s linear infinite;
   animation-play-state: inherit;

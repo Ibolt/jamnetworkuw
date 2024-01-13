@@ -36,7 +36,7 @@
 
 .link-text {
   color: inherit;
-  font-size: 3em;
+  font-size: var(--font-300);
   text-decoration: none;
   text-wrap: nowrap;
 }
@@ -59,7 +59,7 @@
   position: relative;
   color: white;
   padding: 10px;
-  font-size: 1.5em;
+  font-size: var(--font-100);
   font-family: inherit;
   text-decoration: none;
   border-radius: 4px;

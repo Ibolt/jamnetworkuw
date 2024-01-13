@@ -36,8 +36,8 @@ export const HoverGradientEventCard = ({
       style={overrideStyles ? overrideStyles : {}}
     >
       <div className="gradient-card-content">
-        <h3 className="gradient-card-title">{title}</h3>
-        <h4 className="gradient-card-event-subtitle">{textToSpanList(desc)}</h4>
+        <h3>{title}</h3>
+        <p className="gradient-card-event-subtitle">{textToSpanList(desc)}</p>
       </div>
     </div>
   );
@@ -59,12 +59,7 @@ export const HoverGradientFileCard = ({
   return (
     <div key={id} className="gradient-card" style={{ aspectRatio: 0 }}>
       <div className="gradient-card-content">
-        <h3
-          className="gradient-card-title"
-          style={{ fontSize: "1.5rem", marginBottom: "2rem" }}
-        >
-          {title}
-        </h3>
+        <p style={{ marginBottom: "2rem" }}>{title}</p>
         <a
           className="gradient-card-file-button"
           href={webViewLink}
