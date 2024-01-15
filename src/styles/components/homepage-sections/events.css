@@ -1,3 +1,35 @@
+.event-cards-container {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--space-standard) var(--space-section) var(--space-section)
+    var(--space-section);
+  gap: var(--space-standard);
+  justify-content: center;
+}
+.regular-event-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-standard);
+}
+.events-text {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+@media (max-width: 430px) {
+  .regular-event-cards-container {
+    flex-direction: column;
+  }
+  .events-text {
+    width: auto;
+    padding: var(--space-section) var(--space-section) 0 var(--space-section);
+    font-size: var(--font-100);
+  }
+}
+
 .hidden {
   opacity: 0;
   filter: blur(5px);

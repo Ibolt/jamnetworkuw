@@ -6,13 +6,24 @@
 
 :root {
   /* Font Sizes */
-  --font-xl: 20rem;
+  --font-xl: 23rem;
   --font-700: 7rem;
   --font-500: 5.75rem;
   --font-300: 3rem;
   --font-200: 2rem;
   --font-100: 1.5rem;
   --font-min: 1rem;
+
+  /* Colours */
+  --clr-1: #736afd;
+  --clr-2: #698eec;
+  --clr-3: #5fb1dc;
+  --clr-4: #54d5cb;
+  --clr-5: #4af8ba;
+
+  /* Spacing */
+  --space-section: 8rem;
+  --space-standard: 4rem;
 }
 
 * {
@@ -24,13 +35,57 @@
 html,
 body {
   max-width: 100vw;
-  /* overflow-x: scroll; */
+  overflow-x: clip;
 }
 
 body {
   background-color: #1d3461;
   color: white;
 }
+
+/* Media Breakpoints */
+@media (max-width: 430px) {
+  :root {
+    /* Font Sizes */
+    --font-xl: 15rem;
+    --font-700: 4rem;
+    --font-500: 3rem;
+    --font-300: 2rem;
+    --font-200: 1.5rem;
+    --font-100: 1.25rem;
+    --font-min: 1rem;
+
+    /* Colours */
+    --clr-1: #736afd;
+    --clr-2: #698eec;
+    --clr-3: #5fb1dc;
+    --clr-4: #54d5cb;
+    --clr-5: #4af8ba;
+
+    /* Spacing */
+    --space-section: 2rem;
+    --space-standard: 1rem;
+  }
+}
+/* 
+- XL: 2560 x 1440 (needs adjustment)
+- Large Laptops: 
+  1920 x 1080 (needs adjustment)
+  1728 x 1117
+  1600 x 900 (seems fine)
+
+- Medium Laptops:
+  1536 x 864 (seems fine)
+  1440 x 900 (seems fine)
+  1366 x 768 (seems fine)
+
+- Small Laptops:
+  1280 x 800 (needs some adjustment)
+
+- Mobile:
+  Widest seems to be 430px
+
+*/
 
 /* Typography */
 h1 {
@@ -56,30 +111,4 @@ p {
 .p--min {
   font-size: var(--font-min);
   font-weight: 400;
-}
-
-/* Default Element Overrides */
-button {
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 4px;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  font-family: inherit;
-}
-button:hover {
-  background-color: white;
-  color: #1d3461;
-  cursor: pointer;
-}
-
-.link {
-  color: white;
-  text-decoration: none;
-  font-size: var(--font-min);
-  cursor: pointer;
-}
-.link:hover {
-  text-decoration: underline;
 }

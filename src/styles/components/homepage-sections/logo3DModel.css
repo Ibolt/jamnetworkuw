@@ -1,0 +1,9 @@
+.spline-container {
+  flex: 1;
+  pointer-events: none;
+  width: 100vw !important;
+}
+.spline-container > canvas {
+  /* width: 30% !important; */
+  /* height: 30% !important; */
+}

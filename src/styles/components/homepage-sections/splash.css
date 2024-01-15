@@ -1,0 +1,53 @@
+.splash-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: var(--space-section);
+  height: 100vh;
+}
+
+.gradient-link-button {
+  position: relative;
+  color: white;
+  padding: 10px;
+  font-size: var(--font-100);
+  font-family: inherit;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: var(--clr-1);
+  transition: all 0.5s ease;
+}
+.gradient-link-button::before,
+.gradient-link-button::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: -0.3rem;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-1),
+    var(--clr-3),
+    var(--clr-5),
+    var(--clr-3),
+    var(--clr-1)
+  );
+  animation: gradient-rotation 10s linear infinite;
+}
+.gradient-link-button::after {
+  filter: blur(3.5rem);
+}
+
+.gradient-link-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes gradient-rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}

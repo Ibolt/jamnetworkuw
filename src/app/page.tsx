@@ -1,110 +1,22 @@
 "use client";
 
-import "../styles/pages/homePage.css";
 import About from "./components/homepage-sections/about";
 import SubClubs from "./components/homepage-sections/subclubs";
 import Execs from "./components/homepage-sections/execs";
 import Events from "./components/homepage-sections/events";
-import { DISCORD_LINK, MAIL_LINK } from "./components/constants";
-import Logo3DModel from "./components/logo3DModel";
 import Link from "next/link";
+import Splash from "./components/homepage-sections/splash";
+import CircleNavButtons from "./components/homepage-sections/circleNavButtons";
 
 export default function Home() {
   return (
     <main>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "32px",
-          alignItems: "center",
-          padding: "8em",
-          height: "100vh",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "32px",
-            flex: 2,
-          }}
-        >
-          <div>
-            <p style={{ fontWeight: 300 }}>Welcome To</p>
-            <h1>JamNetwork UW</h1>
-            <p>
-              A music club at the University of Waterloo open to musicians of
-              all styles, genres, and levels of experience!
-            </p>
-          </div>
-          <div style={{ display: "flex", gap: "2em" }}>
-            <a
-              className="gradient-link-button"
-              href={MAIL_LINK}
-              rel="noreferrer noopener"
-            >
-              Get In Touch
-            </a>
-            <a
-              className="gradient-link-button"
-              href={DISCORD_LINK}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Join Our Discord
-            </a>
-          </div>
-        </div>
-        <Logo3DModel />
-      </div>
+      <Splash />
       <About />
       <Events />
       <SubClubs />
       <Execs />
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          alignItems: "center",
-          gap: "4em",
-          height: "70vh",
-          padding: "4em",
-          overflow: "hidden",
-          backgroundColor: "black",
-        }}
-      >
-        <div
-          className="circle-link"
-          style={{
-            backgroundColor: "#4AF8BA",
-            color: "black",
-          }}
-        >
-          <span>
-            <Link href="/forms" className="link-text">
-              Sign Ups
-            </Link>
-          </span>
-        </div>
-        <div className="circle-link" style={{ backgroundColor: "#736afd" }}>
-          <span>
-            <Link href="/docs" className="link-text">
-              Docs
-            </Link>
-          </span>
-        </div>
-        <div
-          className="circle-link"
-          style={{ backgroundColor: "#FFD449", color: "black" }}
-        >
-          <span>
-            <Link href="/newsletter" className="link-text">
-              Newsletter
-            </Link>
-          </span>
-        </div>
-      </div>
+      <CircleNavButtons />
     </main>
   );
 }

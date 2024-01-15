@@ -40,23 +40,8 @@ const Events = () => {
       }}
     >
       <h1 className="hidden">Events</h1>
-      <div
-        style={{
-          height: "90%",
-          width: "100%",
-          display: "flex",
-          flexWrap: "wrap",
-          padding: "4em 8em 8em 8em",
-          gap: "4em",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "4em",
-          }}
-        >
+      <div className="event-cards-container">
+        <div className="regular-event-cards-container">
           <HoverGradientEventCard
             title="Jams"
             desc={eventCardDescriptions[0]}
@@ -83,14 +68,7 @@ const Events = () => {
         />
       </div>
 
-      <p
-        className="hidden p--large"
-        style={{
-          width: "50%",
-          textAlign: "center",
-          marginBottom: "2em",
-        }}
-      >
+      <p className="hidden p--large events-text">
         We do a lot more too, like Album Cover Concerts, Trivia Nights, Movie
         Nights, Listening Parties, and pretty much anything our members can
         think of! Everyone's encouraged to suggest ideas no matter how out there

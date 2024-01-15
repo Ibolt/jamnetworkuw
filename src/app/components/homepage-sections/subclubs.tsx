@@ -98,7 +98,15 @@ const SubClubs = () => {
       />
       <div className="subclub-card__text-container">
         <h2 className="subheading">PRODUCTION CLUB</h2>
-        <p>Track roasts and mixing workshops etc.</p>
+        <p>
+          Production club is a bunch of music-loving people who want to make
+          tunes and share them! Everyone is welcome, from complete beginners to
+          more advanced members! We usually do track roasts, where we share
+          songs with each other to get constructive feedback, as well as
+          workshops on specific aspects of producing/mixing. No fancy stuff,
+          just a bunch of DAWs, a pair of monitors, and a room full of a good
+          vibes.
+        </p>
       </div>
     </div>,
   ];
@@ -181,7 +189,7 @@ const SubClubs = () => {
         }}
       >
         <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
-          <h1 style={{ fontSize: "23em", fontWeight: 600 }}>Meet The Execs</h1>
+          <h1 className="execs-transition-text">Meet The Execs</h1>
         </div>
       </div>
     </div>

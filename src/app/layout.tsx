@@ -4,7 +4,7 @@ import { Jost } from "next/font/google";
 import "./globals.css";
 
 import NavBar from "./components/navBar";
-import { NavLinks, SocialLinks } from "./components/navLinks";
+import Footer from "./components/footer";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -24,47 +24,7 @@ export default function RootLayout({
       <body className={jost.className}>
         <NavBar />
         {children}
-        <footer>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              background: "black",
-              padding: "4em",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                gap: "2em",
-                marginBottom: "2em",
-              }}
-            >
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p style={{ marginBottom: "0.25em" }}>Site Map</p>
-                {NavLinks}
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <p style={{ marginBottom: "0.25em" }}>Socials</p>
-                {SocialLinks([
-                  <div className="p--min">Instagram</div>,
-                  <div className="p--min">YouTube</div>,
-                  <div className="p--min">SoundCloud</div>,
-                  <div className="p--min">Discord</div>,
-                ])}
-              </div>
-              <p>jamnetworkuw@gmail.com</p>
-            </div>
-            <p className="p--min">
-              &copy; {new Date().getFullYear()} JamNetwork UW
-            </p>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

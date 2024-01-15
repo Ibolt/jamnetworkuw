@@ -65,22 +65,17 @@ const About = () => {
   const movement3 = useMovement();
 
   return (
-    <div style={{ height: "100vh", overflow: "hidden" }}>
+    <div className="about-us-container">
       <div className="about-us-slider">
         <div className="about-us-slider__moving-content" ref={runningTextRef}>
           <h1 className="about-us-slider__running-text">
-            • About us • About us • About us • About us • About us • About us
+            • About us • About us • About us • About us • About us • About us •
+            About us • About us • About us • About us • About us • About us
           </h1>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          padding: "8em 0em 8em 8em",
-          gap: "12em",
-        }}
-      >
-        <p className="p--large" style={{ width: "50%" }}>
+      <div className="about-us-content-container">
+        <p className="p--large about-us-content-container__text">
           If you’re thinking,
           <span style={{ fontStyle: "italic", color: "#FFD449" }}>
             “I do music. Where does one do music around here? How do I run into
@@ -90,17 +85,16 @@ const About = () => {
           training or lack thereof, you can join our community of musicians and
           come along on our collective journey of musical growth.
         </p>
-        <div style={{ position: "relative" }}>
+        <div className="about-us-content-container__images">
           <Image
             src="/media/about-us/about_us_1.jpeg"
             alt="Crowd gathered around campfire with some playing guitar."
             width={600}
             height={450}
+            id="about-us__image-1"
             className="about-us__image"
             style={{
               borderRadius: "15% 85% 0% 100% / 0% 47% 53% 100%",
-              bottom: "22px",
-              left: "-40px",
               transform: `translate(${movement1.translateX}px, ${movement1.translateY}px)`,
             }}
           />
@@ -109,24 +103,23 @@ const About = () => {
             alt="Person sat on cajon playing acoustic guitar and singing to an audience."
             width={600}
             height={400}
+            id="about-us__image-2"
             className="about-us__image"
             style={{
               borderRadius: "0% 100% 86% 14% / 0% 30% 70% 100%",
-              left: "191px",
-              top: "167px",
               transform: `translate(${movement2.translateX}px, ${movement2.translateY}px)`,
             }}
           />
+
           <Image
             src="/media/about-us/about_us_3.jpeg"
             alt="Person standing playing electric guitar."
             width={400}
             height={600}
+            id="about-us__image-3"
             className="about-us__image"
             style={{
               borderRadius: "0% 100% 0% 100% / 28% 58% 42% 72%",
-              left: "-150px",
-              top: "-21px",
               transform: `translate(${movement3.translateX}px, ${movement3.translateY}px)`,
             }}
           />

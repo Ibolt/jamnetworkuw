@@ -13,7 +13,7 @@ const Execs = () => {
           gap: "1rem",
         }}
       >
-        <p style={{ fontSize: "32px" }}>{name}</p>
+        <p className="p--large">{name}</p>
         <div
           style={{
             position: "relative",
@@ -31,15 +31,14 @@ const Execs = () => {
             height={400}
           />
         </div>
-        <p style={{ fontSize: "32px", fontWeight: 300 }}>{role}</p>
+        <p className="p--large" style={{ fontWeight: 300 }}>
+          {role}
+        </p>
       </div>
     );
   };
 
   const colors = ["#736afd", "#698eec", "#5fb1dc", "#54d5cb", "#4af8ba"];
-
-  // const windowWidth = typeof window !== "undefined" ? window.innerWidth : 1000; // Default value
-
   const backgroundBubbles = Array.from({
     length: 10,
   }).map((_, i) => {

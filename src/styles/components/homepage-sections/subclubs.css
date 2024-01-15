@@ -38,3 +38,14 @@
   padding: 1em;
   width: 50%;
 }
+
+.execs-transition-text {
+  font-size: var(--font-xl);
+  font-weight: 600;
+}
+
+@media (max-width: 430px) {
+  .subclub-card__text-container {
+    width: auto;
+  }
+}
