@@ -58,8 +58,8 @@ const SubClubs = () => {
       <div className="subclub-card__text-container">
         <h2>BANDWIDTH</h2>
         <p>
-          Bandwidth is JamNet's very own radio show on Radio Waterloo CKMS 102.7
-          FM, Mondays at 7PM! We play student submissions, feature themed
+          Bandwidth is JamNet&apos;s very own radio show on Radio Waterloo CKMS
+          102.7 FM, Mondays at 7PM! We play student submissions, feature themed
           episodes around specific musical topics, and have even hosted some
           interviews! Every show is accompnied by an in-person listening party
           where we come to hang out and listen to the show together!
