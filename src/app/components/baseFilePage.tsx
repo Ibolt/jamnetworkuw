@@ -16,6 +16,7 @@ export default async function BaseFilePage({
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5em" }}>
         {files.map((file) => (
           <HoverGradientFileCard
+            key={file.id}
             id={file.id || ""}
             title={file.name || ""}
             webViewLink={file.webViewLink || ""}
