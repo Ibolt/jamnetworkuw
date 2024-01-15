@@ -46,7 +46,7 @@ const SubClubs = () => {
 
   const slideKeys = ["bandwidth", "vocal_victories", "prod_club"];
   const slides = [
-    <div className="subclub-card swiper-slide">
+    <div key={slideKeys[0]} className="subclub-card swiper-slide">
       <Image
         src="/media/subclubs/bandwidth_card_cover.jpg"
         alt="Bandwidth Card Background Image"
@@ -58,15 +58,15 @@ const SubClubs = () => {
       <div className="subclub-card__text-container">
         <h2>BANDWIDTH</h2>
         <p>
-          Bandwidth is JamNet's very own radio show on Radio Waterloo's CKMS
-          102.7 FM, Mondays at 7PM! We play student submissions, feature themed
+          Bandwidth is JamNet's very own radio show on Radio Waterloo CKMS 102.7
+          FM, Mondays at 7PM! We play student submissions, feature themed
           episodes around specific musical topics, and have even hosted some
           interviews! Every show is accompnied by an in-person listening party
           where we come to hang out and listen to the show together!
         </p>
       </div>
     </div>,
-    <div className="subclub-card swiper-slide">
+    <div key={slideKeys[1]} className="subclub-card swiper-slide">
       <Image
         src="/media/subclubs/vocal_victories_card_cover.jpg"
         alt="Vocal Victories Card Background Image"
@@ -87,7 +87,7 @@ const SubClubs = () => {
         </p>
       </div>
     </div>,
-    <div className="subclub-card swiper-slide">
+    <div key={slideKeys[2]} className="subclub-card swiper-slide">
       <Image
         src="/media/subclubs/prod_club_card_cover.jpg"
         alt="Production Club Card Background Image"

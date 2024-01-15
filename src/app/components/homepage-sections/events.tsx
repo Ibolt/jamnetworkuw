@@ -71,8 +71,8 @@ const Events = () => {
       <p className="hidden p--large events-text">
         We do a lot more too, like Album Cover Concerts, Trivia Nights, Movie
         Nights, Listening Parties, and pretty much anything our members can
-        think of! Everyone's encouraged to suggest ideas no matter how out there
-        they may seem!
+        think of! Everyone&apos;s encouraged to suggest ideas no matter how out
+        there they may seem!
       </p>
     </div>
   );
