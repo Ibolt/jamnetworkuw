@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
