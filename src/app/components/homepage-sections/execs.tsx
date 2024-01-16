@@ -23,13 +23,13 @@ const Execs = () => {
           key={name}
           className="exec-bubble"
         >
-          <Image
+          {/* <Image
             src={src}
             alt={`Image of ${name}: ${role} of JamNet`}
             className="exec-bubble"
             width={400}
             height={400}
-          />
+          /> */}
         </div>
         <p className="p--large" style={{ fontWeight: 300 }}>
           {role}
