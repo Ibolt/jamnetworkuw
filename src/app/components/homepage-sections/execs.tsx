@@ -45,32 +45,32 @@ const ImageBubble = ({
   );
 };
 
-const Execs = () => {
-  const colors = ["#736afd", "#698eec", "#5fb1dc", "#54d5cb", "#4af8ba"];
-  const backgroundBubbles = Array.from({
-    length: 10,
-  }).map((_, i) => {
-    const colorIndex = Math.floor(Math.random() * colors.length);
-    const animationDuration = Math.random() * 10 + 10; // Random duration between 10 and 20 seconds
-    return (
-      <div
-        key={i}
-        className="background-bubble"
-        style={{
-          position: "absolute",
-          width: "200px",
-          height: "200px",
-          borderRadius: "50%",
-          zIndex: 0,
-          backgroundColor: colors[colorIndex],
-          filter: "blur(25px)",
-          left: i * 200,
-          animation: `bubble-rise ${animationDuration}s linear infinite`,
-        }}
-      />
-    );
-  });
+const colors = ["#736afd", "#698eec", "#5fb1dc", "#54d5cb", "#4af8ba"];
+const backgroundBubbles = Array.from({
+  length: 10,
+}).map((_, i) => {
+  const colorIndex = Math.floor(Math.random() * colors.length);
+  const animationDuration = Math.random() * 10 + 10; // Random duration between 10 and 20 seconds
+  return (
+    <div
+      key={i}
+      className="background-bubble"
+      style={{
+        position: "absolute",
+        width: "200px",
+        height: "200px",
+        borderRadius: "50%",
+        zIndex: 0,
+        backgroundColor: colors[colorIndex],
+        filter: "blur(25px)",
+        left: i * 200,
+        animation: `bubble-rise ${animationDuration}s linear infinite`,
+      }}
+    />
+  );
+});
 
+const Execs = () => {
   const execsData = [
     { src: "/media/execs/will.jpg", name: "Will Bernier", role: "President" },
     { src: "/media/execs/eric.jpg", name: "Eric Folino", role: "Treasurer" },

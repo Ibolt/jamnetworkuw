@@ -4,7 +4,7 @@
   border-radius: 50%;
   transition: all 0.5s ease-in-out;
 }
-.exec-bubble::before,
+/* .exec-bubble::before,
 .exec-bubble::after {
   z-index: -1;
   content: "";
@@ -21,7 +21,7 @@
 }
 .exec-bubble::after {
   filter: blur(3.5rem);
-}
+} */
 .exec-bubble:hover {
   transform: scale(1.05);
 }
@@ -55,7 +55,6 @@
   white-space: nowrap;
   animation: scroll 25s linear infinite;
   animation-play-state: inherit;
-  will-change: transform;
 }
 .execs-slider__running-bubbles::after {
   content: "";
