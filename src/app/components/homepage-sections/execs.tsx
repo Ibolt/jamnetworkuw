@@ -1,43 +1,51 @@
 import Image from "next/image";
 import "../../../styles/homepage-sections/execs.css";
 
-const Execs = () => {
-  const imageBubble = (src: string, name: string, role: string) => {
-    return (
+const ImageBubble = ({
+  src,
+  name,
+  role,
+}: {
+  src: string;
+  name: string;
+  role: string;
+}) => {
+  return (
+    <div
+      key={name}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "1rem",
+      }}
+    >
+      <p className="p--large">{name}</p>
       <div
-        key={name}
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "1rem",
+          position: "relative",
+          width: "400px",
+          height: "400px",
         }}
+        key={name}
+        className="exec-bubble"
       >
-        <p className="p--large">{name}</p>
-        <div
-          style={{
-            position: "relative",
-            width: "400px",
-            height: "400px",
-          }}
-          key={name}
-          className="exec-bubble"
-        >
-          {/* <Image
-            src={src}
-            alt={`Image of ${name}: ${role} of JamNet`}
-            className="exec-bubble"
-            width={400}
-            height={400}
-          /> */}
-        </div>
-        <p className="p--large" style={{ fontWeight: 300 }}>
-          {role}
-        </p>
+        {/* <Image
+      src={src}
+      alt={`Image of ${name}: ${role} of JamNet`}
+      className="exec-bubble"
+      width={400}
+      height={400}
+    /> */}
       </div>
-    );
-  };
+      <p className="p--large" style={{ fontWeight: 300 }}>
+        {role}
+      </p>
+    </div>
+  );
+};
 
+const Execs = () => {
   const colors = ["#736afd", "#698eec", "#5fb1dc", "#54d5cb", "#4af8ba"];
   const backgroundBubbles = Array.from({
     length: 10,
@@ -63,36 +71,55 @@ const Execs = () => {
     );
   });
 
-  const bubbles = [
-    imageBubble("/media/execs/will.jpg", "Will Bernier", "President"),
-    imageBubble("/media/execs/eric.jpg", "Eric Folino", "Treasurer"),
-    imageBubble("/media/execs/imaan.jpg", "Imaan Gill", "Secretary"),
-    imageBubble(
-      "/media/execs/alex.jpg",
-      "Alex Bouliane",
-      "Social Media Manager"
-    ),
-    imageBubble(
-      "/media/execs/melina.jpg",
-      "Melina Liu",
-      "Social Media Manager"
-    ),
-    imageBubble(
-      "/media/execs/charlie.jpg",
-      "Charlie Dickson",
-      "Assistant Events Leader"
-    ),
-    imageBubble(
-      "/media/execs/bastian.jpg",
-      "Bastian Perez",
-      "Equipment Team Director"
-    ),
-    imageBubble(
-      "/media/execs/emma.jpg",
-      "Emma Mihajlovic",
-      "Education Director"
-    ),
+  const execsData = [
+    { src: "/media/execs/will.jpg", name: "Will Bernier", role: "President" },
+    { src: "/media/execs/eric.jpg", name: "Eric Folino", role: "Treasurer" },
+    { src: "/media/execs/imaan.jpg", name: "Imaan Gill", role: "Secretary" },
+    {
+      src: "/media/execs/alex.jpg",
+      name: "Alex Bouliane",
+      role: "Social Media Manager",
+    },
+    {
+      src: "/media/execs/melina.jpg",
+      name: "Melina Liu",
+      role: "Social Media Manager",
+    },
+    {
+      src: "/media/execs/charlie.jpg",
+      name: "Charlie Dickson",
+      role: "Assistant Events Leader",
+    },
+    {
+      src: "/media/execs/bastian.jpg",
+      name: "Bastian Perez",
+      role: "Equipment Team Director",
+    },
+    {
+      src: "/media/execs/emma.jpg",
+      name: "Emma Mihajlovic",
+      role: "Education Director",
+    },
+    // rest of your data
   ];
+
+  const execBubbles = execsData.map((exec, index) => (
+    <ImageBubble
+      key={`bubble1-${exec.role}`}
+      src={exec.src}
+      name={exec.name}
+      role={exec.role}
+    />
+  ));
+
+  const execBubblesCopy = execsData.map((exec, index) => (
+    <ImageBubble
+      key={`bubble2-${exec.role}`}
+      src={exec.src}
+      name={exec.name}
+      role={exec.role}
+    />
+  ));
 
   return (
     <div
@@ -115,8 +142,10 @@ const Execs = () => {
         {backgroundBubbles}
         <div className="execs-slider">
           <div className="execs-slider__moving-content">
-            <div className="execs-slider__running-bubbles">{bubbles}</div>
-            <div className="execs-slider__running-bubbles">{bubbles}</div>
+            <div className="execs-slider__running-bubbles">{execBubbles}</div>
+            <div className="execs-slider__running-bubbles">
+              {execBubblesCopy}
+            </div>
           </div>
         </div>
       </div>
