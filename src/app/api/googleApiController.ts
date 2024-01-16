@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === "development") {
 } else {
   credentials = {
     client_email: process.env.CLIENT_EMAIL,
-    private_key: process.env.PRIVATE_KEY,
+    private_key: process.env.PRIVATE_KEY?.split(String.raw`\n`).join("\n"),
   };
 }
 
