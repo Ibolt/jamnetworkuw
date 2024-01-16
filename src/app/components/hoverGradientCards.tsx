@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
-import "../../styles/components/hoverGradientCard.css";
+
+import "../../styles/hoverGradientCard.css";
 
 type HoverGradientCardProps = {
   title: string;

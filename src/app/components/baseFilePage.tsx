@@ -1,18 +1,21 @@
 import { GDriveFile } from "../api/types";
 import { HoverGradientFileCard } from "./hoverGradientCards";
+import "../../styles/baseFilePage.css";
 
 type BaseFilePageProps = {
+  title: string;
   files: GDriveFile[];
   buttonText?: string;
 };
 
 export default async function BaseFilePage({
+  title,
   files,
   buttonText,
 }: BaseFilePageProps) {
   return (
-    <div style={{ padding: "0em 8em 8em 8em", minHeight: "100vh" }}>
-      <h1 style={{ marginBottom: "0.5em" }}>Forms</h1>
+    <div className="base-file-page-container">
+      <h1 style={{ marginBottom: "0.5em" }}>{title}</h1>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5em" }}>
         {files.map((file) => (
           <HoverGradientFileCard

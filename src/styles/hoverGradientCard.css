@@ -34,6 +34,9 @@
 }
 
 .gradient-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background: radial-gradient(rgb(255, 255, 255, 0.2) 8%, transparent 8%);
   background-position: 0% 0%;
   background-size: 5vmin 5vmin;

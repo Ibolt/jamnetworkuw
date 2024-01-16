@@ -1,6 +1,7 @@
 "use client";
 import Spline from "@splinetool/react-spline";
-import "../../styles/components/homepage-sections/logo3DModel.css";
+
+import "../../styles/homepage-sections/logo3DModel.css";
 
 export default function Logo3DModel() {
   const SPLINE_LINK =

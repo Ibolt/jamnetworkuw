@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import "swiper/css";
-import "../../../styles/components/homepage-sections/subclubs.css";
+import "../../../styles/homepage-sections/subclubs.css";
 
 const SubClubs = () => {
   const sectionContainerRef = useRef<HTMLDivElement>(null);
@@ -40,7 +40,6 @@ const SubClubs = () => {
         end: "+=" + -2 * getScrollAmount(),
         pin: true,
         scrub: 0.5,
-        markers: true,
       },
     });
   });

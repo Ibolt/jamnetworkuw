@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import "../../../styles/components/homepage-sections/about.css";
+import "../../../styles/homepage-sections/about.css";
 
 const About = () => {
   const [scrollPosition, setScrollPosition] = useState(0);

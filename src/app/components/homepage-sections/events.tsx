@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
-import "../../../styles/components/homepage-sections/events.css";
 import { HoverGradientEventCard } from "../hoverGradientCards";
+
+import "../../../styles/homepage-sections/events.css";
 
 const Events = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);

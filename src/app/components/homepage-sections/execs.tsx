@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "../../../styles/components/homepage-sections/execs.css";
+import "../../../styles/homepage-sections/execs.css";
 
 const Execs = () => {
   const imageBubble = (src: string, name: string, role: string) => {

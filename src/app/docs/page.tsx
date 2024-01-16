@@ -4,5 +4,5 @@ import BaseFilePage from "../components/baseFilePage";
 export default async function DocsPage() {
   const files = await listDocs();
 
-  return <BaseFilePage files={files} />;
+  return <BaseFilePage title="Club Documents" files={files} />;
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import "../../../styles/components/homepage-sections/circleNavButtons.css";
+import "../../../styles/homepage-sections/circleNavButtons.css";
 
 const CircleNavButtons = () => {
   return (

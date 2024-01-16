@@ -7,7 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { IG_LINK, YT_LINK, SOUNDCLOUD_LINK, DISCORD_LINK } from "./constants";
-import "../../styles/components/footer.css";
+import "../../styles/footer.css";
 
 export const NavLinks = ({
   className,

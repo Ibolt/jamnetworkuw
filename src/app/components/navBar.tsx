@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { NavLinks, SocialIcons, SocialLinks } from "./navLinks";
-import "../../styles/components/navBar.css";
+import { SocialIcons, SocialLinks } from "./navLinks";
+import "../../styles/navBar.css";
 
 const NavBar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -15,6 +15,7 @@ const NavBar = () => {
 
   const handleMenuClick = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+    console.log("clicked, mobileMenuOpen is now", mobileMenuOpen);
   };
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const NavBar = () => {
         backgroundColor: prevScrollPos > 200 ? "black" : "transparent",
       }}
     >
-      <Link href="/" className="navbar-icon">
+      <Link href="/" className="navbar-icon" onClick={handleMenuClick}>
         <Image
           src="/media/JN-minimal-logo.png"
           width={50}
@@ -53,7 +54,40 @@ const NavBar = () => {
       />
       <div className={`navbar-links-container ${mobileMenuOpen ? "show" : ""}`}>
         <div className="navbar-links-inner-container">
-          <NavLinks className="navbar-page-links" childClass="navbar-link" />
+          <div className="navbar-page-links">
+            <Link
+              href="/"
+              className="navbar-link"
+              key="about-nav-link"
+              onClick={handleMenuClick}
+            >
+              About
+            </Link>
+            <Link
+              href="/forms"
+              className="navbar-link"
+              key="forms-nav-link"
+              onClick={handleMenuClick}
+            >
+              Sign Ups
+            </Link>
+            <Link
+              href=""
+              className="navbar-link"
+              key="gallery-nav-link"
+              onClick={handleMenuClick}
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/docs"
+              className="navbar-link"
+              key="docs-nav-link"
+              onClick={handleMenuClick}
+            >
+              Documents
+            </Link>
+          </div>
           <SocialLinks childClass="navbar-social-link" flexDirection="row">
             {SocialIcons}
           </SocialLinks>

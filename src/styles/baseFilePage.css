@@ -1,0 +1,4 @@
+.base-file-page-container {
+  padding: 0em var(--space-section) var(--space-section) var(--space-section);
+  min-height: 100vh;
+}
