@@ -30,13 +30,13 @@ const ImageBubble = ({
         key={name}
         className="exec-bubble"
       >
-        {/* <Image
-      src={src}
-      alt={`Image of ${name}: ${role} of JamNet`}
-      className="exec-bubble"
-      width={400}
-      height={400}
-    /> */}
+        <Image
+          src={src}
+          alt={`Image of ${name}: ${role} of JamNet`}
+          className="exec-bubble"
+          width={400}
+          height={400}
+        />
       </div>
       <p className="p--large" style={{ fontWeight: 300 }}>
         {role}
@@ -100,7 +100,6 @@ const Execs = () => {
       name: "Emma Mihajlovic",
       role: "Education Director",
     },
-    // rest of your data
   ];
 
   const execBubbles = execsData.map((exec, index) => (
@@ -139,7 +138,7 @@ const Execs = () => {
           transform: "translate(0px 0px)",
         }}
       >
-        {backgroundBubbles}
+        {/* {backgroundBubbles} */}
         <div className="execs-slider">
           <div className="execs-slider__moving-content">
             <div className="execs-slider__running-bubbles">{execBubbles}</div>

@@ -1,17 +1,3 @@
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-:root {
-  --clr-1: #736afd;
-  --clr-2: #698eec;
-  --clr-3: #5fb1dc;
-  --clr-4: #54d5cb;
-  --clr-5: #4af8ba;
-}
-
 .exec-bubble {
   position: relative;
   object-fit: cover;

@@ -12,7 +12,7 @@ export default function Home() {
       <About />
       <Events />
       <SubClubs />
-      {/* <Execs /> */}
+      <Execs />
       <CircleNavButtons />
     </main>
   );
