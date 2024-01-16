@@ -1,4 +1,9 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
+// This ensures that the icon CSS is loaded immediately before attempting to render icons
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+// Prevent fontawesome from dynamically adding its css since we did it manually above
+config.autoAddCss = false;
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 
