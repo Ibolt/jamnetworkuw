@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import "../../../styles/components/homepage-sections/events.css";
 import { HoverGradientEventCard } from "../hoverGradientCards";

@@ -1,3 +1,4 @@
+"use client";
 import Spline from "@splinetool/react-spline";
 import "../../styles/components/homepage-sections/logo3DModel.css";
 
