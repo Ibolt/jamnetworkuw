@@ -1,10 +1,19 @@
 import { google } from "googleapis";
 
-import credentials from "../../../credentials.json";
 import { GDriveFile } from "./types";
 
 const SCOPES = ["https://www.googleapis.com/auth/drive.metadata.readonly"];
 const FOLDER_MIME_TYPE = "application/vnd.google-apps.folder";
+
+let credentials;
+if (process.env.NODE_ENV === "development") {
+  credentials = require("../../../credentials.json");
+} else {
+  credentials = {
+    client_email: process.env.CLIENT_EMAIL,
+    private_key: process.env.PRIVATE_KEY,
+  };
+}
 
 const auth = new google.auth.GoogleAuth({
   credentials: credentials,
