@@ -138,7 +138,7 @@ const Execs = () => {
           transform: "translate(0px 0px)",
         }}
       >
-        {/* {backgroundBubbles} */}
+        {backgroundBubbles}
         <div className="execs-slider">
           <div className="execs-slider__moving-content">
             <div className="execs-slider__running-bubbles">{execBubbles}</div>
