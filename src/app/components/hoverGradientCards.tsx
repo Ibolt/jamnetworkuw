@@ -7,37 +7,14 @@ type HoverGradientCardProps = {
   desc: string;
   additionalClasses?: string;
   overrideStyles?: CSSProperties;
-  isMobileDevice: boolean;
 };
-
-// Utility function
-const isMobile = (userAgent: string) => {
-  return /mobile/i.test(userAgent);
-};
-
-// getServerSideProps function
-export async function getServerSideProps(context: {
-  req: { headers: { [x: string]: any } };
-}) {
-  const userAgent = context.req.headers["user-agent"];
-  const isMobileDevice = isMobile(userAgent);
-
-  return {
-    props: {
-      isMobileDevice,
-      // Pass other props as needed
-    },
-  };
-}
 
 export const HoverGradientEventCard = ({
   title,
   desc,
   additionalClasses,
   overrideStyles,
-  isMobileDevice,
 }: HoverGradientCardProps) => {
-  console.log(isMobileDevice);
 
   const textToSpanList = (string: string) => {
     return string.split(" ").map((word, i) => {
