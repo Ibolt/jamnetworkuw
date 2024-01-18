@@ -30,8 +30,8 @@ const CircleNavButtons = () => {
         style={{ backgroundColor: "#FFD449", color: "black" }}
       >
         <span>
-          <Link href="/newsletter" className="link-text">
-            Newsletter
+          <Link href="" className="link-text">
+            Gallery
           </Link>
         </span>
       </div>
