@@ -16,7 +16,7 @@
 }
 
 .navbar-hamburger {
-  display: none;
+  display: none!important;
 }
 
 .navbar-page-links {
