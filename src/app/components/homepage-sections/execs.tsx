@@ -21,21 +21,12 @@ const ImageBubble = ({
       }}
     >
       <p className="p--large">{name}</p>
-      <div
-        style={{
-          position: "relative",
-          width: "400px",
-          height: "400px",
-        }}
-        key={name}
-        className="exec-bubble"
-      >
+      <div style={{}} key={name} className="exec-bubble">
         <Image
           src={src}
           alt={`Image of ${name}: ${role} of JamNet`}
           className="exec-bubble"
-          width={400}
-          height={400}
+          fill
         />
       </div>
       <p className="p--large" style={{ fontWeight: 300 }}>
@@ -102,7 +93,7 @@ const Execs = () => {
     },
   ];
 
-  const execBubbles = execsData.map((exec, index) => (
+  const execBubbles = execsData.map((exec) => (
     <ImageBubble
       key={`bubble1-${exec.role}`}
       src={exec.src}
@@ -111,7 +102,7 @@ const Execs = () => {
     />
   ));
 
-  const execBubblesCopy = execsData.map((exec, index) => (
+  const execBubblesCopy = execsData.map((exec) => (
     <ImageBubble
       key={`bubble2-${exec.role}`}
       src={exec.src}
