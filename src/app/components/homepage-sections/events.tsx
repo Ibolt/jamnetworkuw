@@ -66,7 +66,7 @@ const Events = () => {
           title="Jamboree"
           desc={eventCardDescriptions[3]}
           additionalClasses="hidden"
-          overrideStyles={{ aspectRatio: "1/0.3" }}
+          overrideStyles={{ aspectRatio: "1/0.2" }}
         />
       </div>
 
