@@ -1,8 +1,17 @@
-.spline-container {
+/* .spline-container {
   flex: 1;
   pointer-events: none;
-  /* width: 100vw !important; */
+} */
+.spline-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
 }
+
 .spline-container > canvas {
   /* width: 30% !important; */
   /* height: 30% !important; */
