@@ -16,7 +16,7 @@
 }
 
 .navbar-hamburger {
-  display: none!important;
+  display: none !important;
 }
 
 .navbar-page-links {
@@ -41,7 +41,7 @@
 
 @media (max-width: 430px) {
   .navbar-hamburger {
-    display: block;
+    display: block !important;
     font-size: var(--font-200);
   }
   .navbar-icon {

@@ -37,9 +37,13 @@ const SubClubs = () => {
       scrollTrigger: {
         trigger: sectionContainerRef.current,
         start: "top+=35 top",
-        end: "+=" + -2 * getScrollAmount(),
+        end: "+=" + -1 * getScrollAmount(),
         pin: true,
         scrub: 0.5,
+        markers: true,
+      },
+      onUpdate: () => {
+        console.log("x now: ");
       },
     });
   });

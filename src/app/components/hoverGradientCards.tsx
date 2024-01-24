@@ -15,7 +15,6 @@ export const HoverGradientEventCard = ({
   additionalClasses,
   overrideStyles,
 }: HoverGradientCardProps) => {
-
   const textToSpanList = (string: string) => {
     return string.split(" ").map((word, i) => {
       return (
