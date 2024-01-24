@@ -189,7 +189,7 @@ const SubClubs = () => {
           zIndex: 9999,
           display: "flex",
           alignItems: "center",
-          transform: "translate3d(100%, 35px, 0)",
+          transform: "translate3d(100vw, 35px, 0)",
         }}
       >
         <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
