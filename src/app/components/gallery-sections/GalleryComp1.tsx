@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import "../../../styles/components/gallery.css";
+import "../../../styles/gallery.css";
 
 
 const GalleryComp1 = () => {
