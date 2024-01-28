@@ -35,7 +35,7 @@ const NavBar = () => {
       className="navbar-container"
       style={{
         top: visible ? "0" : "-100px",
-        backgroundColor: prevScrollPos > 200 ? "black" : "transparent",
+        backgroundColor: prevScrollPos > 100 ? "black" : "transparent",
       }}
     >
       <Link href="/" className="navbar-icon" onClick={handleMenuClick}>

@@ -153,9 +153,9 @@ const SubClubs = () => {
           grabCursor
           autoplay={{
             delay: 2000,
-            disableOnInteraction: true,
+            disableOnInteraction: false,
           }}
-          speed={3000}
+          speed={2000}
           effect="creative"
           creativeEffect={{
             prev: {
