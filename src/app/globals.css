@@ -7,7 +7,7 @@
 :root {
   /* Font Sizes */
   --font-xl: 23rem;
-  --font-700: 7rem;
+  --font-700: 6.75rem;
   --font-500: 5.75rem;
   --font-300: 3rem;
   --font-200: 2rem;
@@ -44,7 +44,32 @@ body {
 }
 
 /* Media Breakpoints */
-@media (max-width: 430px) {
+/* Small Mobile */
+@media (max-width: 374px) {
+  :root {
+    /* Font Sizes */
+    --font-xl: 15rem;
+    --font-700: 3.5rem;
+    --font-500: 2.75rem;
+    --font-300: 1.75rem;
+    --font-200: 1.25rem;
+    --font-100: 1rem;
+    --font-min: 0.75rem;
+
+    /* Colours */
+    --clr-1: #736afd;
+    --clr-2: #698eec;
+    --clr-3: #5fb1dc;
+    --clr-4: #54d5cb;
+    --clr-5: #4af8ba;
+
+    /* Spacing */
+    --space-section: 2rem;
+    --space-standard: 1rem;
+  }
+}
+/* Mobile */
+@media (min-width: 375px) and (max-width: 768px) {
   :root {
     /* Font Sizes */
     --font-xl: 15rem;
@@ -67,6 +92,79 @@ body {
     --space-standard: 1rem;
   }
 }
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 900px) {
+  :root {
+    /* Font Sizes */
+    --font-xl: 23rem;
+    --font-700: 6rem;
+    --font-500: 5rem;
+    --font-300: 2.75rem;
+    --font-200: 1.75rem;
+    --font-100: 1.3rem;
+    --font-min: 1rem;
+
+    /* Spacing */
+    --space-section: 4rem;
+    --space-standard: 2rem;
+  }
+}
+
+/* Large Tablets */
+@media (min-width: 901px) and (max-width: 1280px) {
+  :root {
+    /* Font Sizes */
+    --font-xl: 15rem;
+    --font-700: 4rem;
+    --font-500: 3rem;
+    --font-300: 2rem;
+    --font-200: 1.5rem;
+    --font-100: 1.2rem;
+    --font-min: 1rem;
+
+    /* Spacing */
+    --space-section: 4rem;
+    --space-standard: 2rem;
+  }
+}
+
+/* Small Laptops */
+@media (min-width: 1281px) and (max-width: 1366px) {
+  :root {
+    /* Font Sizes */
+    --font-xl: 23rem;
+    --font-700: 6rem;
+    --font-500: 5rem;
+    --font-300: 2.75rem;
+    --font-200: 1.75rem;
+    --font-100: 1.3rem;
+    --font-min: 1rem;
+  }
+}
+
+/* @media (min-width: 431px) and (max-width: 768px) {
+  :root {
+    --font-xl: 23rem;
+    --font-700: 6rem;
+    --font-500: 5rem;
+    --font-300: 2.5rem;
+    --font-200: 1.75rem;
+    --font-100: 1.5rem;
+    --font-min: 1.25rem;
+  }
+} */
+/* @media (min-width: 431px) and (max-width: 1300px) {
+  :root {
+    --font-xl: 23rem;
+    --font-700: 6rem;
+    --font-500: 5rem;
+    --font-300: 2.5rem;
+    --font-200: 1.75rem;
+    --font-100: 1.5rem;
+    --font-min: 1.25rem;
+  }
+} */
 /* 
 - XL: 2560 x 1440 (needs adjustment)
 - Large Laptops: 

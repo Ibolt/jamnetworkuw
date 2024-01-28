@@ -19,7 +19,7 @@
   margin-bottom: 2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .regular-event-cards-container {
     flex-direction: column;
   }
@@ -27,6 +27,12 @@
     width: auto;
     padding: var(--space-section) var(--space-section) 0 var(--space-section);
     font-size: var(--font-100);
+  }
+}
+
+@media (max-width: 768px) {
+  .regular-event-cards-container {
+    flex-direction: column;
   }
 }
 

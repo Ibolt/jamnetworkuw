@@ -42,9 +42,6 @@ const SubClubs = () => {
         scrub: 0.5,
         markers: true,
       },
-      onUpdate: () => {
-        console.log("x now: ");
-      },
     });
   });
 

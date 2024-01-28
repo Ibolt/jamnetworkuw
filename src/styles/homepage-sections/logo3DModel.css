@@ -1,9 +1,11 @@
 .spline-container {
   flex: 1;
   pointer-events: none;
-  /* width: 100vw !important; */
 }
-.spline-container > canvas {
-  /* width: 30% !important; */
-  /* height: 30% !important; */
+@media (max-width: 768px) {
+  .spline-container {
+    flex: none;
+    margin-left: 5vw;
+    height: 50% !important;
+  }
 }

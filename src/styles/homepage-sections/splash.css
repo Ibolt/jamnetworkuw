@@ -1,11 +1,70 @@
 .splash-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: calc(var(--space-standard) / 2);
   align-items: center;
   padding: var(--space-section);
   height: 100vh;
 }
+
+.splash-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 2;
+}
+
+@media (max-height: 680px) {
+  .splash-container {
+    height: 120vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .splash-text-container {
+    padding: calc(var(--space-section) / 2);
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .splash-text-container {
+    padding: var(--space-section);
+  }
+}
+
+@media (max-width: 768px) {
+  .splash-container {
+    padding: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .splash-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .splash-text-container {
+    flex: none;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1280px) {
+  .splash-text-container {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1366px) {
+  .splash-text-container {
+    flex: 1.65;
+  }
+}
+
+/* 
+  1440+ is fine
+  1366 - 1280 is fine
+  
+*/
 
 .gradient-link-button {
   position: relative;

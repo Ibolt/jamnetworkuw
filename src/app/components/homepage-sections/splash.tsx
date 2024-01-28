@@ -5,14 +5,7 @@ import "../../../styles/homepage-sections/splash.css";
 const Splash = () => {
   return (
     <div className="splash-container">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "32px",
-          flex: 2,
-        }}
-      >
+      <div className="splash-text-container">
         <div>
           <p className="p--min" style={{ fontWeight: 300 }}>
             Welcome To
