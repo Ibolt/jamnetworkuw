@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === "development") {
     client_email: process.env.CLIENT_EMAIL,
     private_key: process.env.PRIVATE_KEY?.split(String.raw`\n`).join("\n"),
   };
+  console.log(credentials);
 }
 
 const auth = new google.auth.GoogleAuth({
