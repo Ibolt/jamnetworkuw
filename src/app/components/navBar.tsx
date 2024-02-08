@@ -72,12 +72,12 @@ const NavBar = () => {
               Sign Ups
             </Link>
             <Link
-              href=""
+              href="https://calendar.google.com/calendar/u/1?cid=amFtbmV0d29ya3V3QGdtYWlsLmNvbQ"
               className="navbar-link"
               key="gallery-nav-link"
               onClick={handleMenuClick}
             >
-              Gallery
+              Event Calendar
             </Link>
             <Link
               href="/docs"

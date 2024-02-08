@@ -30,8 +30,11 @@ const CircleNavButtons = () => {
         style={{ backgroundColor: "#FFD449", color: "black" }}
       >
         <span>
-          <Link href="" className="link-text">
-            Gallery
+          <Link
+            href="https://calendar.google.com/calendar/u/1?cid=amFtbmV0d29ya3V3QGdtYWlsLmNvbQ"
+            className="link-text"
+          >
+            Event Calendar
           </Link>
         </span>
       </div>

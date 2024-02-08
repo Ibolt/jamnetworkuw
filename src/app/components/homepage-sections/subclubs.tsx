@@ -10,6 +10,37 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import "swiper/css";
 import "../../../styles/homepage-sections/subclubs.css";
 
+const SubClubSlide = ({
+  imgPath,
+  imgAltText,
+  title,
+  desc,
+}: {
+  imgPath: string;
+  imgAltText: string;
+  title: string;
+  desc: string;
+}) => {
+  return (
+    <SwiperSlide>
+      <div className="subclub-card swiper-slide">
+        <Image
+          src={imgPath}
+          alt={imgAltText}
+          fill
+          style={{
+            objectFit: "cover",
+          }}
+        />
+        <div className="subclub-card__text-container">
+          <h2>{title}</h2>
+          <p>{desc}</p>
+        </div>
+      </div>
+    </SwiperSlide>
+  );
+};
+
 const SubClubs = () => {
   const sectionContainerRef = useRef<HTMLDivElement>(null);
   const execsTransitionWrapperRef = useRef<HTMLDivElement>(null);
@@ -40,76 +71,45 @@ const SubClubs = () => {
         end: "+=" + -1 * getScrollAmount(),
         pin: true,
         scrub: 0.5,
-        markers: true,
       },
     });
   });
 
-  const slideKeys = ["bandwidth", "vocal_victories", "prod_club"];
+  const slideKeys = [
+    "bandwidth",
+    "vocal_victories",
+    "prod_club",
+    "theory_club",
+  ];
   const slides = [
-    <div key={slideKeys[0]} className="subclub-card swiper-slide">
-      <Image
-        src="/media/subclubs/bandwidth_card_cover.jpg"
-        alt="Bandwidth Card Background Image"
-        fill
-        style={{
-          objectFit: "cover",
-        }}
-      />
-      <div className="subclub-card__text-container">
-        <h2>BANDWIDTH</h2>
-        <p>
-          Bandwidth is JamNet&apos;s very own radio show on Radio Waterloo CKMS
-          102.7 FM, Mondays at 7PM! We play student submissions, feature themed
-          episodes around specific musical topics, and have even hosted some
-          interviews! Every show is accompnied by an in-person listening party
-          where we come to hang out and listen to the show together!
-        </p>
-      </div>
-    </div>,
-    <div key={slideKeys[1]} className="subclub-card swiper-slide">
-      <Image
-        src="/media/subclubs/vocal_victories_card_cover.jpg"
-        alt="Vocal Victories Card Background Image"
-        fill
-        style={{
-          objectFit: "cover",
-        }}
-      />
-      <div className="subclub-card__text-container">
-        <h2>VOCAL VICTORIES</h2>
-        <p>
-          Vocal Victories emodies the educational, fun and enthusitic spirit of
-          JamNetwork, focusing on vocals and singing. Through these sessions, we
-          hope to improve members abilities and confidence to sing in all
-          different sorts of environments, having fun along the way. We do vocal
-          drills, practice songs, and perform in a very special tunnel on
-          campus. Only victories here!
-        </p>
-      </div>
-    </div>,
-    <div key={slideKeys[2]} className="subclub-card swiper-slide">
-      <Image
-        src="/media/subclubs/prod_club_card_cover.jpg"
-        alt="Production Club Card Background Image"
-        fill
-        style={{
-          objectFit: "cover",
-        }}
-      />
-      <div className="subclub-card__text-container">
-        <h2 className="subheading">PRODUCTION CLUB</h2>
-        <p>
-          Production club is a bunch of music-loving people who want to make
-          tunes and share them! Everyone is welcome, from complete beginners to
-          more advanced members! We usually do track roasts, where we share
-          songs with each other to get constructive feedback, as well as
-          workshops on specific aspects of producing/mixing. No fancy stuff,
-          just a bunch of DAWs, a pair of monitors, and a room full of a good
-          vibes.
-        </p>
-      </div>
-    </div>,
+    <SubClubSlide
+      key={slideKeys[0]}
+      imgPath="/media/subclubs/bandwidth_card_cover.jpg"
+      imgAltText="Bandwidth Card Background Image"
+      title="BANDWIDTH"
+      desc="Bandwidth is JamNet's very own radio show on Radio Waterloo CKMS 102.7 FM, Mondays at 7PM! We play student submissions, feature themed episodes around specific musical topics, and have even hosted some interviews! Every show is accompnied by an in-person listening party where we come to hang out and listen to the show together!"
+    />,
+    <SubClubSlide
+      key={slideKeys[1]}
+      imgPath="/media/subclubs/vocal_victories_card_cover.jpg"
+      imgAltText="Vocal Victories Card Background Image"
+      title="VOCAL VICTORIES"
+      desc="Vocal Victories emodies the educational, fun and enthusitic spirit of JamNetwork, focusing on vocals and singing. Through these sessions, we hope to improve members abilities and confidence to sing in all different sorts of environments, having fun along the way. We do vocal drills, practice songs, and perform in a very special tunnel on campus. Only victories here!"
+    />,
+    <SubClubSlide
+      key={slideKeys[2]}
+      imgPath="/media/subclubs/prod_club_card_cover.jpg"
+      imgAltText="Production Club Card Background Image"
+      title="PRODUCTION CLUB"
+      desc="Production club is a bunch of music-loving people who want to make tunes and share them! Everyone is welcome, from complete beginners to more advanced members! We usually do track roasts, where we share songs with each other to get constructive feedback, as well as workshops on specific aspects of producing/mixing. No fancy stuff, just a bunch of DAWs, a pair of monitors, and a room full of a good vibes."
+    />,
+    <SubClubSlide
+      key={slideKeys[3]}
+      imgPath="/media/subclubs/theory_club_card_cover.jpg"
+      imgAltText="Theory and Composition Club Card Background Image"
+      title="THEORY AND COMPOSITION CLUB"
+      desc="Every Wednesday at 6pm in MC 4060, we delve into a variety of topics relating to music theory and composition. Each week has a theme ranging from basic harmony, to composing for brass, to song analysis, to showcasing original compositions."
+    />,
   ];
 
   return (
@@ -170,7 +170,7 @@ const SubClubs = () => {
           style={{ height: "inherit", paddingBottom: "2em" }}
         >
           {slides.map((slide, i) => (
-            <SwiperSlide key={slideKeys[i]}>{slide}</SwiperSlide>
+            <SwiperSlide key={`swiper-${slideKeys[i]}`}>{slide}</SwiperSlide>
           ))}
         </Swiper>
       </div>
