@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 import { SocialIcons, SocialLinks } from "./navLinks";
 import "../../styles/navBar.css";
+import { GOOGLE_CAL_LINK } from "./constants";
 
 const NavBar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -15,7 +16,6 @@ const NavBar = () => {
 
   const handleMenuClick = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    console.log("clicked, mobileMenuOpen is now", mobileMenuOpen);
   };
 
   useEffect(() => {
@@ -71,14 +71,15 @@ const NavBar = () => {
             >
               Sign Ups
             </Link>
-            <Link
-              href="https://calendar.google.com/calendar/u/1?cid=amFtbmV0d29ya3V3QGdtYWlsLmNvbQ"
+            <a
+              href={GOOGLE_CAL_LINK}
               className="navbar-link"
               key="gallery-nav-link"
-              onClick={handleMenuClick}
+              target="_blank"
+              rel="noreferrer noopener"
             >
               Event Calendar
-            </Link>
+            </a>
             <Link
               href="/docs"
               className="navbar-link"

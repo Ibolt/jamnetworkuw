@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import "../../../styles/homepage-sections/circleNavButtons.css";
+import { GOOGLE_CAL_LINK } from "../constants";
 
 const CircleNavButtons = () => {
   return (
@@ -30,12 +31,14 @@ const CircleNavButtons = () => {
         style={{ backgroundColor: "#FFD449", color: "black" }}
       >
         <span>
-          <Link
-            href="https://calendar.google.com/calendar/u/1?cid=amFtbmV0d29ya3V3QGdtYWlsLmNvbQ"
+          <a
+            href={GOOGLE_CAL_LINK}
             className="link-text"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             Event Calendar
-          </Link>
+          </a>
         </span>
       </div>
     </div>
