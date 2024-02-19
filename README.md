@@ -2,7 +2,13 @@ Using NodeJS v20.10.0.
 
 ## Getting Started
 
-First, run the development server:
+First install dependencies using the package manager of your choice
+```
+# Example with NPM
+npm i
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
