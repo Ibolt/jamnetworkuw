@@ -1,11 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCreative } from "swiper/modules";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import "swiper/css";
 import "../../../styles/homepage-sections/subclubs.css";
@@ -42,39 +38,6 @@ const SubClubSlide = ({
 };
 
 const SubClubs = () => {
-  const sectionContainerRef = useRef<HTMLDivElement>(null);
-  const execsTransitionWrapperRef = useRef<HTMLDivElement>(null);
-  const execsTransitionTextRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (
-      execsTransitionTextRef.current === null ||
-      execsTransitionWrapperRef.current === null ||
-      sectionContainerRef.current === null
-    )
-      return;
-    gsap.registerPlugin(ScrollTrigger);
-
-    const getScrollAmount = () => {
-      return (
-        -1 * (execsTransitionTextRef.current!.offsetWidth - window.innerWidth)
-      );
-    };
-
-    gsap.to(execsTransitionWrapperRef.current, {
-      x: getScrollAmount,
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: sectionContainerRef.current,
-        start: "top+=35 top",
-        end: "+=" + -1 * getScrollAmount(),
-        pin: true,
-        scrub: 0.5,
-      },
-    });
-  });
-
   const slideKeys = [
     "bandwidth",
     "vocal_victories",
@@ -114,7 +77,6 @@ const SubClubs = () => {
 
   return (
     <div
-      ref={sectionContainerRef}
       style={{
         height: "100vh",
         overflowX: "clip",
@@ -152,7 +114,7 @@ const SubClubs = () => {
           loop
           grabCursor
           autoplay={{
-            delay: 2000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           speed={2000}
@@ -167,31 +129,12 @@ const SubClubs = () => {
             },
           }}
           modules={[Autoplay, EffectCreative]}
-          style={{ height: "inherit", paddingBottom: "2em" }}
+          style={{ height: "inherit" }}
         >
           {slides.map((slide, i) => (
             <SwiperSlide key={`swiper-${slideKeys[i]}`}>{slide}</SwiperSlide>
           ))}
         </Swiper>
-      </div>
-      <div
-        ref={execsTransitionWrapperRef}
-        style={{
-          height: "100vh",
-          width: "max-content",
-          backgroundColor: "black",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          zIndex: 9999,
-          display: "flex",
-          alignItems: "center",
-          transform: "translate3d(100vw, 35px, 0)",
-        }}
-      >
-        <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
-          <h1 className="execs-transition-text">Meet The Execs</h1>
-        </div>
       </div>
     </div>
   );

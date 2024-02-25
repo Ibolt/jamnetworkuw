@@ -1,5 +1,12 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import Image from "next/image";
 import "../../../styles/homepage-sections/execs.css";
+import { useRef } from "react";
 
 const ImageBubble = ({
   src,
@@ -45,7 +52,6 @@ const backgroundBubbles = Array.from({
   return (
     <div
       key={i}
-      className="background-bubble"
       style={{
         position: "absolute",
         width: "200px",
@@ -62,6 +68,33 @@ const backgroundBubbles = Array.from({
 });
 
 const Execs = () => {
+  const execBubblesRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (execBubblesRef.current === null) return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    const getScrollAmount = () =>
+      -(execBubblesRef.current!.scrollWidth - window.innerWidth);
+
+    const tween = gsap.to(execBubblesRef.current, {
+      x: getScrollAmount,
+      duration: 3,
+      ease: "none",
+    });
+
+    ScrollTrigger.create({
+      trigger: "#exec-bubbles-wrapper",
+      start: "top 20%",
+      end: () => `+=${getScrollAmount() * -1}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+      invalidateOnRefresh: true,
+      markers: true,
+    });
+  });
+
   const execsData = [
     { src: "/media/execs/will.jpg", name: "Will Bernier", role: "President" },
     { src: "/media/execs/eric.jpg", name: "Eric Folino", role: "Treasurer" },
@@ -102,43 +135,43 @@ const Execs = () => {
     />
   ));
 
-  const execBubblesCopy = execsData.map((exec) => (
-    <ImageBubble
-      key={`bubble2-${exec.role}`}
-      src={exec.src}
-      name={exec.name}
-      role={exec.role}
-    />
-  ));
-
   return (
     <div
       style={{
-        height: "100vh",
+        height: "fit-content",
         overflow: "hidden",
         position: "relative",
         backgroundColor: "black",
       }}
+      id="execs-section-container"
     >
       <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "black",
+          height: "65vh",
+        }}
+      >
+        <h1 style={{ fontSize: "10vw" }}>Meet The Execs</h1>
+      </div>
+      <div id="exec-bubbles-wrapper">
+        <div ref={execBubblesRef} className="exec-bubbles">
+          {execBubbles}
+        </div>
+      </div>
+
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
           height: "inherit",
           justifyContent: "center",
-          transform: "translate(0px 0px)",
         }}
       >
         {backgroundBubbles}
-        <div className="execs-slider">
-          <div className="execs-slider__moving-content">
-            <div className="execs-slider__running-bubbles">{execBubbles}</div>
-            <div className="execs-slider__running-bubbles">
-              {execBubblesCopy}
-            </div>
-          </div>
-        </div>
-      </div>
+      </div> */}
     </div>
   );
 };
