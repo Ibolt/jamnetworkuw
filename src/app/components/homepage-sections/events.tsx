@@ -39,6 +39,7 @@ const Events = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        marginBottom: "2em",
       }}
     >
       <h1 className="hidden">Events</h1>

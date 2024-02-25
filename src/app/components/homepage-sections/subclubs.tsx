@@ -61,17 +61,20 @@ const SubClubs = () => {
       );
     };
 
-    gsap.to(execsTransitionWrapperRef.current, {
+    const tween = gsap.to(execsTransitionWrapperRef.current, {
       x: getScrollAmount,
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: sectionContainerRef.current,
-        start: "top+=35 top",
-        end: "+=" + -1 * getScrollAmount(),
-        pin: true,
-        scrub: 0.5,
-      },
+      duration: 3,
+      ease: "none",
+    });
+
+    ScrollTrigger.create({
+      trigger: sectionContainerRef.current,
+      start: "top",
+      end: () => `+=${getScrollAmount() * -1}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+      invalidateOnRefresh: true,
     });
   });
 
@@ -119,6 +122,7 @@ const SubClubs = () => {
         height: "100vh",
         overflowX: "clip",
         position: "relative",
+        // backgroundColor: "black",
       }}
     >
       <div style={{ height: "inherit" }}>
@@ -155,7 +159,7 @@ const SubClubs = () => {
             delay: 2000,
             disableOnInteraction: false,
           }}
-          speed={2000}
+          speed={4000}
           effect="creative"
           creativeEffect={{
             prev: {
@@ -167,7 +171,7 @@ const SubClubs = () => {
             },
           }}
           modules={[Autoplay, EffectCreative]}
-          style={{ height: "inherit", paddingBottom: "2em" }}
+          style={{ height: "inherit" }}
         >
           {slides.map((slide, i) => (
             <SwiperSlide key={`swiper-${slideKeys[i]}`}>{slide}</SwiperSlide>
@@ -186,7 +190,7 @@ const SubClubs = () => {
           zIndex: 9999,
           display: "flex",
           alignItems: "center",
-          transform: "translate3d(100vw, 35px, 0)",
+          transform: "translate3d(100vw, 0, 0)",
         }}
       >
         <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
