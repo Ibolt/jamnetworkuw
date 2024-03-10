@@ -26,6 +26,7 @@ const ImageBubble = ({
           src={src}
           alt={`Image of ${name}: ${role} of JamNet`}
           className="exec-bubble"
+          sizes="200px"
           fill
         />
       </div>
