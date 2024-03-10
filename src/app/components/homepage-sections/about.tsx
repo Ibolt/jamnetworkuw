@@ -68,7 +68,7 @@ const About = () => {
   return (
     <div className="about-us-container">
       <div className="about-us-slider">
-        <div className="about-us-slider__moving-content" ref={runningTextRef}>
+        <div ref={runningTextRef}>
           <h1 className="about-us-slider__running-text">
             • About us • About us • About us • About us • About us • About us •
             About us • About us • About us • About us • About us • About us
@@ -78,7 +78,7 @@ const About = () => {
       <div className="about-us-content-container">
         <p className="p--large about-us-content-container__text">
           If you’re thinking,
-          <span style={{ fontStyle: "italic", color: "#FFD449" }}>
+          <span style={{ fontStyle: "italic", color: "#FCBF49" }}>
             “I do music. Where does one do music around here? How do I run into
             cool people that I can form a band with?”
           </span>

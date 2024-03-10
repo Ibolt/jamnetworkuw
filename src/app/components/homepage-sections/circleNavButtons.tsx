@@ -28,7 +28,7 @@ const CircleNavButtons = () => {
       </div>
       <div
         className="circle-link"
-        style={{ backgroundColor: "#FFD449", color: "black" }}
+        style={{ backgroundColor: "#FCBF49", color: "black" }}
       >
         <span>
           <a
