@@ -15,7 +15,7 @@ const CircleNavButtons = () => {
       >
         <span>
           <Link href="/forms" className="link-text">
-            Sign Ups
+            Forms
           </Link>
         </span>
       </div>

@@ -69,7 +69,7 @@ const NavBar = () => {
               key="forms-nav-link"
               onClick={handleMenuClick}
             >
-              Sign Ups
+              Forms
             </Link>
             <a
               href={GOOGLE_CAL_LINK}

@@ -28,7 +28,7 @@ export const NavLinks = ({
         About
       </Link>
       <Link href="/forms" className={childClass} key="forms-nav-link">
-        Sign Ups
+        Forms
       </Link>
       <a
         href={GOOGLE_CAL_LINK}

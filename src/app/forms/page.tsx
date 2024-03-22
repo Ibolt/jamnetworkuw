@@ -5,5 +5,5 @@ export const revalidate = 1;
 export default async function FormsPage() {
   const files = await listForms();
 
-  return <BaseFilePage title="Sign Ups" files={files} buttonText="Fill Out" />;
+  return <BaseFilePage title="Forms" files={files} buttonText="Fill Out" />;
 }
