@@ -1,4 +1,8 @@
-import { MAIL_LINK, DISCORD_LINK } from "../constants";
+import {
+  MAIL_LINK,
+  DISCORD_LINK,
+  W24_JAMBOREE_GOFUNDME_LINK,
+} from "../constants";
 import Logo3DModel from "../logo3DModel";
 import "../../../styles/homepage-sections/splash.css";
 
@@ -23,6 +27,14 @@ const Splash = () => {
             rel="noreferrer noopener"
           >
             Get In Touch
+          </a>
+          <a
+            className="gradient-link-button"
+            href={W24_JAMBOREE_GOFUNDME_LINK}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Support our EOT Jamboree
           </a>
           <a
             className="gradient-link-button"

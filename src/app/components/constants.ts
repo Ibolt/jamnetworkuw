@@ -5,3 +5,4 @@ export const SOUNDCLOUD_LINK = "https://soundcloud.com/jamnetwork";
 export const DISCORD_LINK = "https://discord.gg/89rfYDRQvr";
 export const GOOGLE_CAL_LINK =
   "https://calendar.google.com/calendar/u/1?cid=amFtbmV0d29ya3V3QGdtYWlsLmNvbQ";
+export const W24_JAMBOREE_GOFUNDME_LINK = "https://gofund.me/b3decc34";
