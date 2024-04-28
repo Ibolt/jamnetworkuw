@@ -7,6 +7,7 @@ type HoverGradientCardProps = {
   desc: string;
   additionalClasses?: string;
   overrideStyles?: CSSProperties;
+  animationsEnabled: boolean;
 };
 
 export const HoverGradientEventCard = ({
@@ -14,6 +15,7 @@ export const HoverGradientEventCard = ({
   desc,
   additionalClasses,
   overrideStyles,
+  animationsEnabled,
 }: HoverGradientCardProps) => {
   const textToSpanList = (string: string) => {
     return string.split(" ").map((word, i) => {
@@ -22,8 +24,9 @@ export const HoverGradientEventCard = ({
           key={`${word}-${i}`}
           className="gradient-card-event-subtitle-word"
           style={{
-            transitionDelay: `${i * 40}ms`,
+            transitionDelay: animationsEnabled ? `${i * 40}ms` : "5ms",
           }}
+          data-animations-enabled={animationsEnabled}
         >
           {word}
         </span>

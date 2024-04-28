@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "../../../styles/homepage-sections/execs.css";
+import { EXECS_DATA } from "@/app/content/execs";
 
 const ImageBubble = ({
   src,
@@ -21,7 +22,7 @@ const ImageBubble = ({
       }}
     >
       <p className="p--large">{name}</p>
-      <div style={{}} key={name} className="exec-bubble">
+      <div key={name} className="exec-bubble">
         <Image
           src={src}
           alt={`Image of ${name}: ${role} of JamNet`}
@@ -30,7 +31,7 @@ const ImageBubble = ({
           fill
         />
       </div>
-      <p className="p--large" style={{ fontWeight: 300 }}>
+      <p className="p--large" style={{ fontWeight: 300, textAlign: "center" }}>
         {role}
       </p>
     </div>
@@ -62,60 +63,31 @@ const backgroundBubbles = Array.from({
   );
 });
 
-const Execs = () => {
-  const execsData = [
-    { src: "/media/execs/will.jpg", name: "Will Bernier", role: "President" },
-    { src: "/media/execs/eric.jpg", name: "Eric Folino", role: "Treasurer" },
-    { src: "/media/execs/imaan.jpg", name: "Imaan Gill", role: "Secretary" },
-    {
-      src: "/media/execs/alex.jpg",
-      name: "Alex Bouliane",
-      role: "Social Media Manager",
-    },
-    {
-      src: "/media/execs/melina.jpg",
-      name: "Melina Liu",
-      role: "Social Media Manager",
-    },
-    {
-      src: "/media/execs/charlie.jpg",
-      name: "Charlie Dickson",
-      role: "Assistant Events Leader",
-    },
-    {
-      src: "/media/execs/bastian.jpg",
-      name: "Bastian Perez",
-      role: "Equipment Team Director",
-    },
-    {
-      src: "/media/execs/emma.jpg",
-      name: "Emma Mihajlovic",
-      role: "Education Director",
-    },
-  ];
-
-  const execBubbles = execsData.map((exec) => (
+const Execs = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
+  const execBubbles = EXECS_DATA.map((exec) => (
     <ImageBubble
-      key={`bubble1-${exec.role}`}
+      key={`bubble1-${exec.name}`}
       src={exec.src}
       name={exec.name}
       role={exec.role}
     />
   ));
 
-  const execBubblesCopy = execsData.map((exec) => (
-    <ImageBubble
-      key={`bubble2-${exec.role}`}
-      src={exec.src}
-      name={exec.name}
-      role={exec.role}
-    />
-  ));
+  const execBubblesCopy = animationsEnabled
+    ? EXECS_DATA.map((exec) => (
+        <ImageBubble
+          key={`bubble2-${exec.name}`}
+          src={exec.src}
+          name={exec.name}
+          role={exec.role}
+        />
+      ))
+    : [];
 
   return (
     <div
       style={{
-        height: "100vh",
+        height: animationsEnabled ? "100vh" : "max-content",
         overflow: "hidden",
         position: "relative",
         backgroundColor: "black",
@@ -132,11 +104,24 @@ const Execs = () => {
       >
         {backgroundBubbles}
         <div className="execs-slider">
-          <div className="execs-slider__moving-content">
-            <div className="execs-slider__running-bubbles">{execBubbles}</div>
-            <div className="execs-slider__running-bubbles">
-              {execBubblesCopy}
+          <div
+            className="execs-slider__moving-content"
+            data-animations-enabled={animationsEnabled}
+          >
+            <div
+              className="execs-slider__running-bubbles"
+              data-animations-enabled={animationsEnabled}
+            >
+              {execBubbles}
             </div>
+            {animationsEnabled && (
+              <div
+                className="execs-slider__running-bubbles"
+                data-animations-enabled={animationsEnabled}
+              >
+                {execBubblesCopy}
+              </div>
+            )}
           </div>
         </div>
       </div>

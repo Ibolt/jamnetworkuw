@@ -3,11 +3,16 @@ import Link from "next/link";
 import "../../../styles/homepage-sections/circleNavButtons.css";
 import { GOOGLE_CAL_LINK } from "../constants";
 
-const CircleNavButtons = () => {
+const CircleNavButtons = ({
+  animationsEnabled,
+}: {
+  animationsEnabled: boolean;
+}) => {
   return (
     <div className="circle-nav-buttons-container">
       <div
         className="circle-link"
+        data-animations-enabled={animationsEnabled}
         style={{
           backgroundColor: "#4AF8BA",
           color: "black",
@@ -19,7 +24,11 @@ const CircleNavButtons = () => {
           </Link>
         </span>
       </div>
-      <div className="circle-link" style={{ backgroundColor: "#736afd" }}>
+      <div
+        className="circle-link"
+        data-animations-enabled={animationsEnabled}
+        style={{ backgroundColor: "#736afd" }}
+      >
         <span>
           <Link href="/docs" className="link-text">
             Docs
@@ -28,6 +37,7 @@ const CircleNavButtons = () => {
       </div>
       <div
         className="circle-link"
+        data-animations-enabled={animationsEnabled}
         style={{ backgroundColor: "#FCBF49", color: "black" }}
       >
         <span>

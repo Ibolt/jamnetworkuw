@@ -31,7 +31,7 @@
   border-radius: 50%;
 }
 
-.circle-link > span {
+.circle-link[data-animations-enabled="true"] > span {
   position: absolute;
   animation: rotation 5s infinite linear;
   animation-play-state: inherit;
@@ -46,7 +46,7 @@
   }
 }
 
-.circle-link:hover {
+.circle-link:hover[data-animations-enabled="true"] {
   animation-play-state: paused;
   transform: scale(1.1);
 }

@@ -35,11 +35,27 @@
 }
 
 .about-us-slider__running-text {
-  white-space: nowrap;
+  text-align: center;
 }
 
 .about-us__image {
   position: absolute;
+}
+
+@media (min-width: 901px) {
+  .about-us-slider__running-text-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-us-slider {
+    display: flex;
+    justify-content: center;
+  }
+  .about-us-slider__running-text {
+    display: none;
+  }
 }
 
 @media (max-width: 430px) {
