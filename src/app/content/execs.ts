@@ -10,7 +10,11 @@ export const EXECS_DATA = [
     role: "Co-President",
   },
   { src: "/media/execs/imaan.jpg", name: "Imaan Gill", role: "Secretary" },
-  { src: "/media/execs/eric.jpg", name: "Shashwat Mahajon", role: "Treasurer" },
+  {
+    src: "/media/execs/shashwat.jpg",
+    name: "Shashwat Mahajon",
+    role: "Treasurer",
+  },
   {
     src: "/media/execs/julia.jpg",
     name: "Julia You",
