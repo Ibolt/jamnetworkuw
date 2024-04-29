@@ -46,7 +46,7 @@
   }
 }
 
-.circle-link:hover[data-animations-enabled="true"] {
+.circle-link:hover {
   animation-play-state: paused;
   transform: scale(1.1);
 }
