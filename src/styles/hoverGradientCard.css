@@ -75,11 +75,6 @@
 .gradient-card-event-subtitle {
   margin-top: 2vmin;
 }
-.gradient-card-event-subtitle-word {
-  display: inline-block;
-  margin: 0vmin 0.3vmin;
-  position: relative;
-}
 
 .gradient-card-file-button {
   border: 1px solid #4af8ba;

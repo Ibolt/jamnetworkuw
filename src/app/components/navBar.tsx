@@ -40,7 +40,7 @@ const NavBar = () => {
     >
       <Link href="/" className="navbar-icon" onClick={handleMenuClick}>
         <Image
-          src="/media/JN-minimal-logo.png"
+          src="/media/logo.png"
           width={50}
           height={50}
           alt="JamNetwork Logo"

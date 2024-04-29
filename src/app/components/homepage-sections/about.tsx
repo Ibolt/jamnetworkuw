@@ -1,30 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "../../../styles/homepage-sections/about.css";
 
-const About = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const runningTextRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPercentage =
-        window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      setScrollPosition(scrollPercentage * 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    if (runningTextRef.current) {
-      runningTextRef.current.style.transform = `translate3d(-${
-        scrollPosition * 5
-      }vw, 0, 0)`;
-    }
-  }, [scrollPosition]);
-
+const About = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
   function useMovement() {
     const [translateX, setTranslateX] = useState(0);
     const [translateY, setTranslateY] = useState(0);
@@ -32,6 +11,8 @@ const About = () => {
     const [directionY, setDirectionY] = useState(1);
 
     useEffect(() => {
+      if (!animationsEnabled) return;
+
       const intervalId = setInterval(() => {
         let incrementX = Math.random() * (1 - 0.2) + 0.2;
         let incrementY = Math.random() * (1 - 0.2) + 0.2;
@@ -68,12 +49,12 @@ const About = () => {
   return (
     <div className="about-us-container">
       <div className="about-us-slider">
-        <div ref={runningTextRef}>
+        <>
           <h1 className="about-us-slider__running-text">
-            • About us • About us • About us • About us • About us • About us •
-            About us • About us • About us • About us • About us • About us
+            About us • About us • About us
           </h1>
-        </div>
+          <h1 className="about-us-slider__running-text-mobile">About us</h1>
+        </>
       </div>
       <div className="about-us-content-container">
         <p className="p--large about-us-content-container__text">
@@ -96,7 +77,11 @@ const About = () => {
             className="about-us__image"
             style={{
               borderRadius: "15% 85% 0% 100% / 0% 47% 53% 100%",
-              transform: `translate(${movement1.translateX}px, ${movement1.translateY}px)`,
+              transform: animationsEnabled
+                ? `translate(${movement1!.translateX}px, ${
+                    movement1!.translateY
+                  }px)`
+                : "none",
             }}
           />
           <Image
@@ -108,7 +93,11 @@ const About = () => {
             className="about-us__image"
             style={{
               borderRadius: "0% 100% 86% 14% / 0% 30% 70% 100%",
-              transform: `translate(${movement2.translateX}px, ${movement2.translateY}px)`,
+              transform: animationsEnabled
+                ? `translate(${movement2!.translateX}px, ${
+                    movement2!.translateY
+                  }px)`
+                : "none",
             }}
           />
 
@@ -121,7 +110,11 @@ const About = () => {
             className="about-us__image"
             style={{
               borderRadius: "0% 100% 0% 100% / 28% 58% 42% 72%",
-              transform: `translate(${movement3.translateX}px, ${movement3.translateY}px)`,
+              transform: animationsEnabled
+                ? `translate(${movement3!.translateX}px, ${
+                    movement3!.translateY
+                  }px)`
+                : "none",
             }}
           />
         </div>

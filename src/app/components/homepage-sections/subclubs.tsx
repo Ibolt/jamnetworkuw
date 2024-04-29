@@ -41,42 +41,46 @@ const SubClubSlide = ({
   );
 };
 
-const SubClubs = () => {
+const SubClubs = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
   const sectionContainerRef = useRef<HTMLDivElement>(null);
   const execsTransitionWrapperRef = useRef<HTMLDivElement>(null);
   const execsTransitionTextRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    if (
-      execsTransitionTextRef.current === null ||
-      execsTransitionWrapperRef.current === null ||
-      sectionContainerRef.current === null
-    )
-      return;
-    gsap.registerPlugin(ScrollTrigger);
+  useGSAP(
+    () => {
+      if (!animationsEnabled) return;
+      if (
+        execsTransitionTextRef.current === null ||
+        execsTransitionWrapperRef.current === null ||
+        sectionContainerRef.current === null
+      )
+        return;
+      gsap.registerPlugin(ScrollTrigger);
 
-    const getScrollAmount = () => {
-      return (
-        -1 * (execsTransitionTextRef.current!.offsetWidth - window.innerWidth)
-      );
-    };
+      const getScrollAmount = () => {
+        return (
+          -1 * (execsTransitionTextRef.current!.offsetWidth - window.innerWidth)
+        );
+      };
 
-    const tween = gsap.to(execsTransitionWrapperRef.current, {
-      x: getScrollAmount,
-      duration: 3,
-      ease: "none",
-    });
+      const tween = gsap.to(execsTransitionWrapperRef.current, {
+        x: getScrollAmount,
+        duration: 3,
+        ease: "none",
+      });
 
-    ScrollTrigger.create({
-      trigger: sectionContainerRef.current,
-      start: "top",
-      end: () => `+=${getScrollAmount() * -1}`,
-      pin: true,
-      animation: tween,
-      scrub: 1,
-      invalidateOnRefresh: true,
-    });
-  });
+      ScrollTrigger.create({
+        trigger: sectionContainerRef.current,
+        start: "top",
+        end: () => `+=${getScrollAmount() * -1}`,
+        pin: true,
+        animation: tween,
+        scrub: 1,
+        invalidateOnRefresh: true,
+      });
+    },
+    { dependencies: [animationsEnabled] }
+  );
 
   const slideKeys = [
     "bandwidth",
@@ -116,16 +120,8 @@ const SubClubs = () => {
   ];
 
   return (
-    <div
-      ref={sectionContainerRef}
-      style={{
-        height: "100vh",
-        overflowX: "clip",
-        position: "relative",
-        // backgroundColor: "black",
-      }}
-    >
-      <div style={{ height: "inherit" }}>
+    <div ref={sectionContainerRef} data-animations-enabled={animationsEnabled}>
+      <div style={{ height: "100vh" }}>
         <div className="subclubs-slider" style={{ transform: "rotate(5deg)" }}>
           <div className="subclubs-slider__moving-content">
             <div className="subclubs-slider__running-text">
@@ -180,21 +176,16 @@ const SubClubs = () => {
       </div>
       <div
         ref={execsTransitionWrapperRef}
-        style={{
-          height: "100vh",
-          width: "max-content",
-          backgroundColor: "black",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          zIndex: 9999,
-          display: "flex",
-          alignItems: "center",
-          transform: "translate3d(100vw, 0, 0)",
-        }}
+        className="execs-transition-wrapper"
+        data-animations-enabled={animationsEnabled}
       >
         <div ref={execsTransitionTextRef} style={{ whiteSpace: "nowrap" }}>
-          <h1 className="execs-transition-text">Meet The Execs</h1>
+          <h1
+            className="execs-transition-text"
+            data-animations-enabled={animationsEnabled}
+          >
+            Meet The Execs
+          </h1>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import {
 import Logo3DModel from "../logo3DModel";
 import "../../../styles/homepage-sections/splash.css";
 
-const Splash = () => {
+const Splash = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
   return (
     <div className="splash-container">
       <div className="splash-text-container">
@@ -46,7 +46,7 @@ const Splash = () => {
           </a>
         </div>
       </div>
-      <Logo3DModel />
+      <Logo3DModel animationsEnabled={animationsEnabled} />
     </div>
   );
 };
