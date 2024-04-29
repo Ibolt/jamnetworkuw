@@ -1,4 +1,3 @@
-"use client";
 import { CSSProperties } from "react";
 
 import "../../styles/hoverGradientCard.css";

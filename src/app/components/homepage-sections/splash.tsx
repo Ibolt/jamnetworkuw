@@ -1,4 +1,3 @@
-"use client";
 import { MAIL_LINK, DISCORD_LINK } from "../constants";
 import Logo3DModel from "../logo3DModel";
 import "../../../styles/homepage-sections/splash.css";

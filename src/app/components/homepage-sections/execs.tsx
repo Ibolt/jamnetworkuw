@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import "../../../styles/homepage-sections/execs.css";
 import { EXECS_DATA } from "@/app/content/execs";
