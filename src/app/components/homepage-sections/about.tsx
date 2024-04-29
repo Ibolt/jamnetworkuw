@@ -1,16 +1,15 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "../../../styles/homepage-sections/about.css";
 
 const About = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
   function useMovement() {
+    const [translateX, setTranslateX] = useState(0);
+    const [translateY, setTranslateY] = useState(0);
+    const [directionX, setDirectionX] = useState(1);
+    const [directionY, setDirectionY] = useState(1);
     if (animationsEnabled) {
-      const [translateX, setTranslateX] = useState(0);
-      const [translateY, setTranslateY] = useState(0);
-      const [directionX, setDirectionX] = useState(1);
-      const [directionY, setDirectionY] = useState(1);
-
       useEffect(() => {
         const intervalId = setInterval(() => {
           let incrementX = Math.random() * (1 - 0.2) + 0.2;
