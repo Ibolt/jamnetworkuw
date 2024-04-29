@@ -22,7 +22,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-fps-stats": "^0.3.1",
-    "sharp": "^0.33.3",
+    "sharp": "^0.33.1",
     "swiper": "^11.0.5"
   },
   "devDependencies": {
