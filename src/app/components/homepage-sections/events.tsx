@@ -24,7 +24,7 @@ const Events = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
         }
       };
     }
-  }, []);
+  }, [animationsEnabled]);
 
   const eventCardDescriptions = [
     "We bring our instruments (or our voices), split off into groups if needed and play music together. We converse, connect, figure out what songs we like, and then jam out to them!",
