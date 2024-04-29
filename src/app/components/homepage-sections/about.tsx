@@ -9,36 +9,37 @@ const About = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
     const [translateY, setTranslateY] = useState(0);
     const [directionX, setDirectionX] = useState(1);
     const [directionY, setDirectionY] = useState(1);
-    if (animationsEnabled) {
-      useEffect(() => {
-        const intervalId = setInterval(() => {
-          let incrementX = Math.random() * (1 - 0.2) + 0.2;
-          let incrementY = Math.random() * (1 - 0.2) + 0.2;
 
-          if (translateX < -40 || translateX > 40) incrementX *= 0.5;
-          if (translateY < -20 || translateY > 20) incrementY *= 0.5;
+    useEffect(() => {
+      if (!animationsEnabled) return;
 
-          let newTranslateX = translateX + incrementX * directionX;
-          let newTranslateY = translateY + incrementY * directionY;
+      const intervalId = setInterval(() => {
+        let incrementX = Math.random() * (1 - 0.2) + 0.2;
+        let incrementY = Math.random() * (1 - 0.2) + 0.2;
 
-          if (newTranslateX < -50 || newTranslateX > 50) {
-            setDirectionX(-directionX);
-            newTranslateX = translateX - incrementX * directionX;
-          }
-          if (newTranslateY < -30 || newTranslateY > 30) {
-            setDirectionY(-directionY);
-            newTranslateY = translateY - incrementY * directionY;
-          }
+        if (translateX < -40 || translateX > 40) incrementX *= 0.5;
+        if (translateY < -20 || translateY > 20) incrementY *= 0.5;
 
-          setTranslateX(newTranslateX);
-          setTranslateY(newTranslateY);
-        }, 50);
+        let newTranslateX = translateX + incrementX * directionX;
+        let newTranslateY = translateY + incrementY * directionY;
 
-        return () => clearInterval(intervalId);
-      }, [translateX, translateY, directionX, directionY]);
+        if (newTranslateX < -50 || newTranslateX > 50) {
+          setDirectionX(-directionX);
+          newTranslateX = translateX - incrementX * directionX;
+        }
+        if (newTranslateY < -30 || newTranslateY > 30) {
+          setDirectionY(-directionY);
+          newTranslateY = translateY - incrementY * directionY;
+        }
 
-      return { translateX, translateY };
-    }
+        setTranslateX(newTranslateX);
+        setTranslateY(newTranslateY);
+      }, 50);
+
+      return () => clearInterval(intervalId);
+    }, [translateX, translateY, directionX, directionY]);
+
+    return { translateX, translateY };
   }
 
   const movement1 = useMovement();
