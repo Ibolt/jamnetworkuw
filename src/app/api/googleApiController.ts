@@ -38,7 +38,7 @@ const queryDrive = async (fields: string, query: string) => {
 
 export const listForms = async (): Promise<GDriveFile[]> => {
   const FORM_MIME_TYPE = "application/vnd.google-apps.form";
-  const FORMS_FOLDER_ID = "1DThjY3P52H84sUY6cubSmn_BKJlUFxgT";
+  const FORMS_FOLDER_ID = "1lrz2fqNZSpgIxbp46Ysy-XZcfSLTC_tE";
 
   return await queryDrive(
     "files(id, name, webViewLink, mimeType)",
