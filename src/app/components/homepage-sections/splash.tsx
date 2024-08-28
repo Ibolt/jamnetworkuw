@@ -30,14 +30,6 @@ const Splash = ({ animationsEnabled }: { animationsEnabled: boolean }) => {
           </a>
           <a
             className="gradient-link-button"
-            href={W24_JAMBOREE_GOFUNDME_LINK}
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            Support our EOT Jamboree
-          </a>
-          <a
-            className="gradient-link-button"
             href={DISCORD_LINK}
             target="_blank"
             rel="noreferrer noopener"
