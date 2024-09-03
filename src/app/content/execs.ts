@@ -1,20 +1,15 @@
 export const EXECS_DATA = [
   {
-    src: "/media/execs/bastian.jpg",
-    name: "Bastian Perez",
-    role: "Co-President",
+    src: "/media/execs/will.jpg",
+    name: "Will Bernier",
+    role: "President",
   },
   {
-    src: "/media/execs/alnur.jpg",
-    name: "Alnur Nazarbay",
-    role: "Co-President",
+    src: "/media/execs/melina.jpg",
+    name: "Melina Liu",
+    role: "Secretary",
   },
-  { src: "/media/execs/imaan.jpg", name: "Imaan Gill", role: "Secretary" },
-  {
-    src: "/media/execs/shashwat.jpg",
-    name: "Shashwat Mahajon",
-    role: "Treasurer",
-  },
+  { src: "/media/execs/imaan.jpg", name: "Imaan Gill", role: "Treasurer" },
   {
     src: "/media/execs/julia.jpg",
     name: "Julia You",
@@ -26,13 +21,18 @@ export const EXECS_DATA = [
     role: "Media, Marketing, and Design Manager",
   },
   {
-    src: "/media/execs/sebastian.jpg",
-    name: "Sebastian Milewski",
+    src: "/media/execs/bastian.jpg",
+    name: "Bastian Perez",
     role: "Equipment Team Director",
   },
   {
-    src: "/media/execs/will.jpg",
-    name: "Will Bernier",
-    role: "The Archivist",
+    src: "/media/execs/umer.jpg",
+    name: "Umer Riaz",
+    role: "Assistant Events Leader",
+  },
+  {
+    src: "/media/execs/celina.jpg",
+    name: "Celina Cayabyab",
+    role: "Club Agent",
   },
 ];
