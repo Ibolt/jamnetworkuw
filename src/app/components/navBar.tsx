@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 import { SocialIcons, SocialLinks } from "./navLinks";
 import "../../styles/navBar.css";
-import { GOOGLE_CAL_LINK } from "./constants";
 
 const NavBar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -71,13 +70,7 @@ const NavBar = () => {
             >
               Forms
             </Link>
-            <a
-              href={GOOGLE_CAL_LINK}
-              className="navbar-link"
-              key="gallery-nav-link"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <a href="/calendar" className="navbar-link" key="cal-nav-link">
               Event Calendar
             </a>
             <Link

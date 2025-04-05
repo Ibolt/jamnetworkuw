@@ -6,13 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import {
-  IG_LINK,
-  YT_LINK,
-  SOUNDCLOUD_LINK,
-  DISCORD_LINK,
-  GOOGLE_CAL_LINK,
-} from "./constants";
+import { IG_LINK, YT_LINK, SOUNDCLOUD_LINK, DISCORD_LINK } from "./constants";
 import "../../styles/footer.css";
 
 export const NavLinks = ({
@@ -30,13 +24,7 @@ export const NavLinks = ({
       <Link href="/forms" className={childClass} key="forms-nav-link">
         Forms
       </Link>
-      <a
-        href={GOOGLE_CAL_LINK}
-        className={childClass}
-        key="event-cal-nav-link"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
+      <a href={"/calendar"} className={childClass} key="event-cal-nav-link">
         Event Calendar
       </a>
       <Link href="/docs" className={childClass} key="docs-nav-link">
