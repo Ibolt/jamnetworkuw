@@ -32,6 +32,6 @@ export const EXECS_DATA = [
   {
     src: "/media/execs/julia.jpg",
     name: "Julia You",
-    role: "Assistant Events Leader",
+    role: "Jambassador",
   },
 ];
