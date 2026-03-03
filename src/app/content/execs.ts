@@ -1,37 +1,37 @@
 export const EXECS_DATA = [
   {
-    src: "/media/execs/shobhit.jpg",
+    src: "/media/execs/pickle_shobhit.jpg",
     name: "Shobhit Chaudhary",
     role: "President",
   },
   {
-    src: "/media/execs/cait.jpg",
-    name: "Cait Aitchison",
+    src: "/media/execs/pris.jpg",
+    name: "Priscilla Asare",
     role: "Secretary",
   },
   {
-    src: "/media/execs/maia.jpg",
-    name: "Maia Bosma",
+    src: "/media/execs/lisara.jpg",
+    name: "Lisara De Silva",
     role: "Treasurer",
   },
   {
-    src: "/media/execs/harjosh.jpg",
-    name: "Harjosh Virdi",
+    src: "/media/execs/alex.png",
+    name: "Alex Rui He",
     role: "Media, Marketing, and Design Manager",
   },
   {
-    src: "/media/execs/phoebe.jpg",
+    src: "/media/execs/hat_phoebe.jpg",
     name: "Phoebe Yang",
     role: "Media, Marketing, and Design Manager",
   },
   {
-    src: "/media/execs/umer.jpg",
-    name: "Umer Riaz",
-    role: "Assistant Events Leader",
+    src: "/media/execs/will_c.png",
+    name: "William Comay",
+    role: "Events Manager",
   },
   {
-    src: "/media/execs/julia.jpg",
-    name: "Julia You",
-    role: "Jambassador",
+    src: "/media/execs/christine.jpg",
+    name: "Christine Bambe",
+    role: "Equipment Team Director",
   },
 ];
