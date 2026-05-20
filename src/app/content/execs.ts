@@ -1,37 +1,42 @@
 export const EXECS_DATA = [
   {
-    src: "/media/execs/pickle_shobhit.jpg",
-    name: "Shobhit Chaudhary",
+    src: "/media/execs/s26/alex_bruh.png",
+    name: "Alex Rui He",
     role: "President",
   },
   {
-    src: "/media/execs/pris.jpg",
-    name: "Priscilla Asare",
-    role: "Secretary",
-  },
-  {
-    src: "/media/execs/lisara.jpg",
-    name: "Lisara De Silva",
-    role: "Treasurer",
-  },
-  {
-    src: "/media/execs/alex.png",
-    name: "Alex Rui He",
-    role: "Media, Marketing, and Design Manager",
-  },
-  {
-    src: "/media/execs/hat_phoebe.jpg",
+    src: "/media/execs/s26/phoebe_guitar.png",
     name: "Phoebe Yang",
     role: "Media, Marketing, and Design Manager",
   },
   {
-    src: "/media/execs/will_c.png",
-    name: "William Comay",
-    role: "Events Manager",
+    src: "/media/execs/s26/maggie.png",
+    name: "Maggie Qu",
+    role: "Media, Marketing, and Design Manager",
   },
   {
-    src: "/media/execs/christine.jpg",
-    name: "Christine Bambe",
+    src: "/media/execs/s26/shobhit_outside.png",
+    name: "Shobhit Chaudhary",
     role: "Equipment Team Director",
+  },
+  {
+    src: "/media/execs/s26/sahaj.png",
+    name: "Sahaj Nagra",
+    role: "Secretary",
+  },
+  {
+    src: "/media/execs/s26/lia.png",
+    name: "Lia Mendoca",
+    role: "Treasurer",
+  },
+  {
+    src: "/media/execs/s26/lexi.png",
+    name: "Lexi Marfil",
+    role: "Jam Recipe Writer",
+  },
+  {
+    src: "/media/execs/s26/liam.png",
+    name: "Liam McCrory",
+    role: "Assistant Events Leader",
   },
 ];
